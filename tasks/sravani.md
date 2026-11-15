@@ -11,9 +11,9 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 - [ ] All files present in `data/raw/`; row counts logged
 
 ## /s2-ingest (19:00–19:30)
-- [ ] `pipeline/ingest.py`: every CSV goes into one normalized schema in `data/work/detections/sensor=*/year=*/`
-- [ ] Filter: type 0, MODIS confidence ≥ 30, VIIRS n/h
-- [ ] H3 r7 + r5 columns added (DuckDB h3 extension)
+- [x] `pipeline/ingest.py`: every CSV goes into one normalized schema in `data/work/detections/sensor=*/year=*/`
+- [x] Filter: type 0, MODIS confidence ≥ 30, VIIRS n/h
+- [x] H3 r7 + r5 columns added (DuckDB h3 extension)
 
 ## /s3-harmonize (19:30–20:15)
 - [ ] `pipeline/grid.py`: `cell_daily.parquet` (fire cell-days)
