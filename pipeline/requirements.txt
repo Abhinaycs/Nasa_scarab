@@ -1,0 +1,11 @@
+duckdb>=1.1
+polars
+pyarrow
+h3>=4
+numpy
+scipy
+pandas
+matplotlib
+requests
+python-dotenv
+tqdm

@@ -5,9 +5,9 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 
 ## /s1-data-download (18:30–19:00)
 - [ ] Get a FIRMS MAP_KEY (firms.modaps.eosdis.nasa.gov/api) and put it in `.env` as `FIRMS_MAP_KEY=...`
-- [ ] Create `.venv` and `pipeline/requirements.txt`
-- [ ] `pipeline/download.py`: yearly India CSVs (MODIS 2000–2025, S-NPP 2012–2025, NOAA-20 2018–2025), resumable and parallel
-- [ ] `pipeline/download_api.py`: 2026 to date via the FIRMS country API (NOAA-20 + MODIS)
+- [x] Create `.venv` and `pipeline/requirements.txt`
+- [x] `pipeline/download.py`: yearly India CSVs (MODIS 2000–2025, S-NPP 2012–2025, NOAA-20 2018–2025), resumable and parallel
+- [x] `pipeline/download_api.py`: 2026 to date via the FIRMS country API (NOAA-20 + MODIS)
 - [ ] All files present in `data/raw/`; row counts logged
 
 ## /s2-ingest (19:00–19:30)
