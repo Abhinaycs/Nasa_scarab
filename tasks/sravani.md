@@ -25,11 +25,11 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 
 ## /s4-api (20:15–21:15)
 - [x] **Checkpoint first:** stub endpoints returning contract-shaped data, pushed by 20:15
-- [ ] `backend/app/main.py` FastAPI app with CORS, `/api/health`, `/api/meta`
-- [ ] AOI → H3 cells (h3-py), r5 fallback, 413 when too large
-- [ ] `/api/calendar` with climatology + anomalies
-- [ ] `/api/summary`, `/api/timeseries`, `/api/hotspots.csv`
-- [ ] `backend/tests/test_api.py` passes; `backend/requirements.txt`
+- [x] `backend/app/main.py` FastAPI app with CORS, `/api/health`, `/api/meta`
+- [x] AOI → H3 cells (h3-py), r5 fallback, 413 when too large
+- [x] `/api/calendar` with climatology + anomalies
+- [x] `/api/summary`, `/api/timeseries`, `/api/hotspots.csv`
+- [x] `backend/tests/test_api.py` passes; `backend/requirements.txt`
 
 ## /s5-validate-methods (21:15–22:00)
 - [ ] `pipeline/validate.py`: hold-out MAPE, Pettitt test, raw vs harmonized annual plot → `docs/figures/`
