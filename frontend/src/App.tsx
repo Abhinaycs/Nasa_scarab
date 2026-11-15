@@ -11,6 +11,8 @@ import type {
 } from './types'
 import MapView, { type DrawMode, type MapHandle } from './components/MapView'
 import AoiPanel from './components/AoiPanel'
+import ResultsView from './components/ResultsView'
+import type { SelectedMonth } from './components/BurningCalendar'
 
 export type Status = 'idle' | 'loading' | 'error' | 'ready'
 
@@ -37,6 +39,7 @@ export default function App() {
   const [results, setResults] = useState<Results | null>(null)
   const [fitKey, setFitKey] = useState(0)
   const [build, setBuild] = useState<string | null>(null)
+  const [selected, setSelected] = useState<SelectedMonth | null>(null)
   const inflight = useRef<AbortController | null>(null)
 
   const areaKm2 = useMemo(
@@ -75,6 +78,7 @@ export default function App() {
       ])
       if (ctl.signal.aborted) return
       setResults({ calendar, summary, timeseries, request, label: aoiLabel ?? 'Drawn area' })
+      setSelected(null)
       setStatus('ready')
     } catch (e) {
       if ((e as Error).name === 'AbortError') return
@@ -126,21 +130,22 @@ export default function App() {
             />
           </div>
 
-          <div className="charts" aria-live="polite">
+          <div className="charts">
             {status === 'error' && <div className="msg error" role="alert">{error}</div>}
             {status === 'idle' && (
               <div className="placeholder">Pick an area on the left and press Analyze to see its burning calendar.</div>
             )}
-            {status === 'loading' && <div className="placeholder">Loading calendar…</div>}
-            {status === 'ready' && results && (
-              <div className="card">
-                <h3>{results.label}</h3>
-                <div className="placeholder">
-                  {results.calendar.cells.length} months · {results.calendar.years[0]}–{results.calendar.years.at(-1)} ·{' '}
-                  {results.calendar.aoi.area_km2.toLocaleString()} km² · peak month {results.summary.peak_month} ·{' '}
-                  {results.timeseries.weekly.length} weeks. Charts come in /a3.
-                </div>
-              </div>
+            {status === 'loading' && !results && <div className="placeholder">Loading calendar…</div>}
+            {status === 'loading' && results && <div className="hint">Updating…</div>}
+            {results && status !== 'loading' && (
+              <ResultsView
+                label={results.label}
+                calendar={results.calendar}
+                summary={results.summary}
+                timeseries={results.timeseries}
+                selected={selected}
+                onSelect={setSelected}
+              />
             )}
           </div>
         </main>

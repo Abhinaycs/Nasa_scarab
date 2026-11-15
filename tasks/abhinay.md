@@ -18,12 +18,12 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live
 - [x] Date range + baseline selector; area check (> 400,000 km² shows a warning)
 
 ## /a3-calendar-charts (20:15–21:15)
-- [ ] Burning calendar: years down, months across, cividis/log colour, value printed in each cell, median + p90 rows
-- [ ] Anomaly calendar: PuOr diverging ramp centred on the median, "unusually high/low" markers
-- [ ] Monthly climatology (median + IQR band, current year overlaid)
-- [ ] Year-to-date cumulative curves (current year highlighted, past years grey)
-- [ ] Summary cards (peak month, busiest year, this month vs median, season)
-- [ ] Switch from mocks to the real API (`VITE_API_URL`)
+- [x] Burning calendar: years down, months across, cividis/log colour, value printed in each cell, median + p90 rows
+- [x] Anomaly calendar: PuOr diverging ramp centred on the median, "unusually high/low" markers
+- [x] Monthly climatology (median + IQR band, current year overlaid)
+- [x] Year-to-date cumulative curves (current year highlighted, past years grey)
+- [x] Summary cards (peak month, busiest year, this month vs median, season)
+- [ ] Switch from mocks to the real API (`VITE_API_URL`): client ready, waiting for the /s4 stubs
 
 ## /a4-exports-polish (21:15–22:00)
 - [ ] Download hotspots CSV, calendar CSV, PNG of each chart
