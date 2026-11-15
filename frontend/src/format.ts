@@ -13,7 +13,7 @@ export const SOURCE_LABEL: Record<Source, string> = {
   viirs_noaa20_scaled: 'NOAA-20 VIIRS, scaled to S-NPP',
 }
 
-export const fmtInt = (v: number) => Math.round(v).toLocaleString('en-IN')
+export const fmtInt = (v: number) => Math.round(v).toLocaleString('en-US')
 
 /** Short form that fits in a calendar cell. */
 export const fmtCell = (v: number) =>

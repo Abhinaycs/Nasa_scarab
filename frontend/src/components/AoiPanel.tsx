@@ -197,7 +197,7 @@ export default function AoiPanel(p: Props) {
           {p.aoi ? (
             <>
               <strong>{p.aoiLabel ?? 'Drawn area'}</strong>
-              <span>{p.areaKm2 !== null ? `${Math.round(p.areaKm2).toLocaleString()} km²` : ''}</span>
+              <span>{p.areaKm2 !== null ? `${Math.round(p.areaKm2).toLocaleString('en-US')} km²` : ''}</span>
             </>
           ) : (
             <span className="hint">No area selected yet.</span>
@@ -205,7 +205,7 @@ export default function AoiPanel(p: Props) {
         </div>
         {tooBig && (
           <div className="msg warn" role="alert">
-            This area is larger than {MAX_AREA_KM2.toLocaleString()} km². Choose a smaller area to analyse.
+            This area is larger than {MAX_AREA_KM2.toLocaleString('en-US')} km². Choose a smaller area to analyse.
           </div>
         )}
       </section>

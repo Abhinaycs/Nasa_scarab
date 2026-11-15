@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import * as Plot from '@observablehq/plot'
 import type { CalendarResponse } from '../types'
 import { fmtInt } from '../format'
@@ -20,6 +20,13 @@ interface Props {
 export default function AnnualChart({ data, mode }: Props) {
   const current = Math.max(...data.annual.map((a) => a.year))
   const first = Math.min(...data.annual.map((a) => a.year))
+  // A part year has fewer than 12 months of data (the November 2000 start, the current year).
+  const partialYears = useMemo(() => {
+    const n = new Map<number, number>()
+    for (const c of data.cells) n.set(c.year, (n.get(c.year) ?? 0) + 1)
+    return new Set(data.annual.map((a) => a.year).filter((y) => (n.get(y) ?? 0) < 12))
+  }, [data])
+  const partialList = [...partialYears].sort((a, b) => a - b).join(' and ')
 
   // The size of the jump a naive stitch would show: first VIIRS year vs last MODIS-only year.
   const before = data.annual.find((a) => a.year === VIIRS_START - 1)
@@ -28,13 +35,17 @@ export default function AnnualChart({ data, mode }: Props) {
 
   const render = useCallback(
     (width: number) => {
-      const partial = (y: number) => y === current || y === first
+      const partial = (y: number) => partialYears.has(y)
       const common = {
         width,
         height: 260,
         marginLeft: 56,
         style: { background: 'transparent', color: 'var(--text)', fontSize: '11px' },
-        x: { type: 'band' as const, label: null, tickFormat: (y: number) => (y % 5 === 0 ? String(y) : ''), tickSize: 0 },
+        x: {
+          type: 'band' as const,
+          // Every year from first to last, so a missing year shows as a gap
+          domain: Array.from({ length: current - first + 1 }, (_, i) => first + i),
+          label: null, tickFormat: (y: number) => (y % 5 === 0 ? String(y) : ''), tickSize: 0 },
         y: { grid: true, label: 'fire cell-days per year' },
       }
       const sensorLine = Plot.ruleX([VIIRS_START], {
@@ -94,7 +105,7 @@ export default function AnnualChart({ data, mode }: Props) {
         ],
       })
     },
-    [data, mode, current, first],
+    [data, mode, current, first, partialYears],
   )
 
   return (
@@ -124,8 +135,8 @@ export default function AnnualChart({ data, mode }: Props) {
         ) : (
           <>
             <strong>Harmonized:</strong> MODIS years are scaled into VIIRS units using ratios fitted where both sensors
-            overlap, so the series is consistent across 2012. Faded bars are part years ({first} starts in November,{' '}
-            {current} is still in progress).
+            overlap, so the series is consistent across 2012.
+            {partialList && <> Faded bars ({partialList}) are part years with fewer than 12 months of data.</>}
           </>
         )}
       </figcaption>

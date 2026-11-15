@@ -23,7 +23,7 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live
 - [x] Monthly climatology (median + IQR band, current year overlaid)
 - [x] Year-to-date cumulative curves (current year highlighted, past years grey)
 - [x] Summary cards (peak month, busiest year, this month vs median, season)
-- [ ] Switch from mocks to the real API (`VITE_API_URL`): client ready, waiting for the /s4 stubs
+- [x] Switch from mocks to the real API (`VITE_API_URL`): tested against the local /s4 API, all endpoints match
 
 ## /a4-exports-polish (21:15–22:00)
 - [x] Download hotspots CSV, calendar CSV, PNG of each chart

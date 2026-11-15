@@ -57,7 +57,8 @@ export default function BurningCalendar({ data, mode, selected, onSelect }: Prop
   const render = useCallback(
     (width: number) => {
       const unit = 'fire cell-days'
-      const years = [...data.years].map(String)
+      // Every year from first to last, so a year with no data shows as an empty row instead of vanishing
+      const years = Array.from({ length: data.years.at(-1)! - data.years[0] + 1 }, (_, i) => String(data.years[0] + i))
       const rows: Row[] = data.cells.map((c) => ({ y: String(c.year), month: c.month, value: c.value, cell: c }))
       const footer: Row[] = data.climatology.flatMap((m) => [
         { y: 'Median', month: m.month, value: m.median },
