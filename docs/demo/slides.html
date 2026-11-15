@@ -6,7 +6,7 @@
 <!--
   7-slide deck. Open in a browser to present (arrow keys / scroll), or make the PDF with:
     node docs/demo/build-slides.mjs
-  Placeholders to fill before submitting: TEAM_NAME, CHALLENGE_NAME, VALIDATION_*.
+  Placeholders to fill before submitting: TEAM_NAME, CHALLENGE_NAME.
   Screenshots come from docs/demo/screens/ (node docs/demo/screenshots.mjs <app-url>).
 -->
 <style>
@@ -106,16 +106,16 @@
   <h2>Proof: the 2012 jump disappears</h2>
   <div class="cols wide-left">
     <figure>
-      <img src="screens/05-annual-harmonized.png" alt="Harmonized annual fire cell-days">
-      <figcaption>Harmonized annual totals for Punjab: one consistent series across the sensor change.</figcaption>
+      <img src="../figures/annual_raw_vs_harmonized.png" alt="Annual fire cell-days for India: raw Aqua MODIS, raw VIIRS and the harmonized series">
+      <figcaption>India, annual fire cell-days. Raw MODIS sits far below VIIRS; the harmonized series runs straight through 2012.</figcaption>
     </figure>
     <div>
-      <div class="stat">VALIDATION_MAPE</div>
-      <div class="statlabel">error on monthly totals, held-out years 2019–2025 (fit on 2012–2018)</div>
-      <div class="stat">VALIDATION_K</div>
-      <div class="statlabel">more fire cell-days seen by VIIRS than MODIS (national median k)</div>
-      <div class="stat">VALIDATION_PETTITT</div>
-      <div class="statlabel">Pettitt change-point test at 2012 on harmonized annual totals</div>
+      <div class="stat">4.6× → 1.08×</div>
+      <div class="statlabel">step at 2012 (2012–13 vs 2010–11): naive splice vs harmonized</div>
+      <div class="stat">16.7%</div>
+      <div class="statlabel">error on India's monthly totals in held-out years 2019–2025 (fit on 2012–2018), bias −1.2%</div>
+      <div class="stat">≈ 6×</div>
+      <div class="statlabel">more daytime fire cell-days seen by VIIRS than Aqua MODIS (national k = 6.35)</div>
     </div>
   </div>
   <div class="footer"><span>FireCalendar India</span><span>4</span></div>
