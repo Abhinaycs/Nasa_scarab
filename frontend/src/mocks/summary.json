@@ -1,0 +1,23 @@
+{
+ "peak_month": 11,
+ "busiest_year": {
+  "year": 2016,
+  "value": 2078
+ },
+ "current_month": {
+  "year": 2026,
+  "month": 11,
+  "value": 241,
+  "median": 555,
+  "pct_of_median": 43.4,
+  "percentile": 0,
+  "label": "unusually low",
+  "provisional": true
+ },
+ "season": {
+  "start_month": 5,
+  "end_month": 11,
+  "length_months": 7
+ },
+ "total_cell_days": 38211
+}

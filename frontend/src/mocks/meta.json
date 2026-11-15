@@ -1,0 +1,600 @@
+{
+ "coverage": {
+  "modis_terra": {
+   "start": "2000-11-01",
+   "end": "2026-11-14"
+  },
+  "modis_aqua": {
+   "start": "2002-07-04",
+   "end": "2026-11-14"
+  },
+  "viirs_snpp": {
+   "start": "2012-01-20",
+   "end": "2025-12-31"
+  },
+  "viirs_noaa20": {
+   "start": "2018-01-01",
+   "end": "2026-11-14"
+  }
+ },
+ "build_time": "2026-11-15T19:00:00Z",
+ "method_version": "mock-0.1",
+ "national_factors": [
+  {
+   "kind": "aqua_to_snpp",
+   "month": 1,
+   "pass": "D",
+   "k": 2.7,
+   "k_lo": 2.49,
+   "k_hi": 2.92
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 1,
+   "pass": "N",
+   "k": 3.38,
+   "k_lo": 3.11,
+   "k_hi": 3.65
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 2,
+   "pass": "D",
+   "k": 2.78,
+   "k_lo": 2.56,
+   "k_hi": 3
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 2,
+   "pass": "N",
+   "k": 3.48,
+   "k_lo": 3.2,
+   "k_hi": 3.75
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 3,
+   "pass": "D",
+   "k": 2.81,
+   "k_lo": 2.58,
+   "k_hi": 3.03
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 3,
+   "pass": "N",
+   "k": 3.51,
+   "k_lo": 3.23,
+   "k_hi": 3.79
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 4,
+   "pass": "D",
+   "k": 2.78,
+   "k_lo": 2.56,
+   "k_hi": 3
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 4,
+   "pass": "N",
+   "k": 3.48,
+   "k_lo": 3.2,
+   "k_hi": 3.75
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 5,
+   "pass": "D",
+   "k": 2.7,
+   "k_lo": 2.49,
+   "k_hi": 2.92
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 5,
+   "pass": "N",
+   "k": 3.38,
+   "k_lo": 3.11,
+   "k_hi": 3.65
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 6,
+   "pass": "D",
+   "k": 2.6,
+   "k_lo": 2.39,
+   "k_hi": 2.81
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 6,
+   "pass": "N",
+   "k": 3.25,
+   "k_lo": 2.99,
+   "k_hi": 3.51
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 7,
+   "pass": "D",
+   "k": 2.5,
+   "k_lo": 2.3,
+   "k_hi": 2.7
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 7,
+   "pass": "N",
+   "k": 3.12,
+   "k_lo": 2.87,
+   "k_hi": 3.37
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 8,
+   "pass": "D",
+   "k": 2.42,
+   "k_lo": 2.23,
+   "k_hi": 2.61
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 8,
+   "pass": "N",
+   "k": 3.02,
+   "k_lo": 2.78,
+   "k_hi": 3.27
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 9,
+   "pass": "D",
+   "k": 2.39,
+   "k_lo": 2.2,
+   "k_hi": 2.58
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 9,
+   "pass": "N",
+   "k": 2.99,
+   "k_lo": 2.75,
+   "k_hi": 3.23
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 10,
+   "pass": "D",
+   "k": 2.42,
+   "k_lo": 2.23,
+   "k_hi": 2.61
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 10,
+   "pass": "N",
+   "k": 3.02,
+   "k_lo": 2.78,
+   "k_hi": 3.27
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 11,
+   "pass": "D",
+   "k": 2.5,
+   "k_lo": 2.3,
+   "k_hi": 2.7
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 11,
+   "pass": "N",
+   "k": 3.12,
+   "k_lo": 2.87,
+   "k_hi": 3.37
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 12,
+   "pass": "D",
+   "k": 2.6,
+   "k_lo": 2.39,
+   "k_hi": 2.81
+  },
+  {
+   "kind": "aqua_to_snpp",
+   "month": 12,
+   "pass": "N",
+   "k": 3.25,
+   "k_lo": 2.99,
+   "k_hi": 3.51
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 1,
+   "pass": "D",
+   "k": 1.15,
+   "k_lo": 1.06,
+   "k_hi": 1.25
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 1,
+   "pass": "N",
+   "k": 1.44,
+   "k_lo": 1.33,
+   "k_hi": 1.56
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 2,
+   "pass": "D",
+   "k": 1.19,
+   "k_lo": 1.09,
+   "k_hi": 1.28
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 2,
+   "pass": "N",
+   "k": 1.48,
+   "k_lo": 1.36,
+   "k_hi": 1.6
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 3,
+   "pass": "D",
+   "k": 1.2,
+   "k_lo": 1.1,
+   "k_hi": 1.29
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 3,
+   "pass": "N",
+   "k": 1.5,
+   "k_lo": 1.38,
+   "k_hi": 1.62
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 4,
+   "pass": "D",
+   "k": 1.19,
+   "k_lo": 1.09,
+   "k_hi": 1.28
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 4,
+   "pass": "N",
+   "k": 1.48,
+   "k_lo": 1.36,
+   "k_hi": 1.6
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 5,
+   "pass": "D",
+   "k": 1.15,
+   "k_lo": 1.06,
+   "k_hi": 1.25
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 5,
+   "pass": "N",
+   "k": 1.44,
+   "k_lo": 1.33,
+   "k_hi": 1.56
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 6,
+   "pass": "D",
+   "k": 1.11,
+   "k_lo": 1.02,
+   "k_hi": 1.2
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 6,
+   "pass": "N",
+   "k": 1.39,
+   "k_lo": 1.28,
+   "k_hi": 1.5
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 7,
+   "pass": "D",
+   "k": 1.07,
+   "k_lo": 0.98,
+   "k_hi": 1.15
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 7,
+   "pass": "N",
+   "k": 1.33,
+   "k_lo": 1.23,
+   "k_hi": 1.44
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 8,
+   "pass": "D",
+   "k": 1.03,
+   "k_lo": 0.95,
+   "k_hi": 1.12
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 8,
+   "pass": "N",
+   "k": 1.29,
+   "k_lo": 1.19,
+   "k_hi": 1.39
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 9,
+   "pass": "D",
+   "k": 1.02,
+   "k_lo": 0.94,
+   "k_hi": 1.1
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 9,
+   "pass": "N",
+   "k": 1.28,
+   "k_lo": 1.17,
+   "k_hi": 1.38
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 10,
+   "pass": "D",
+   "k": 1.03,
+   "k_lo": 0.95,
+   "k_hi": 1.12
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 10,
+   "pass": "N",
+   "k": 1.29,
+   "k_lo": 1.19,
+   "k_hi": 1.39
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 11,
+   "pass": "D",
+   "k": 1.07,
+   "k_lo": 0.98,
+   "k_hi": 1.15
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 11,
+   "pass": "N",
+   "k": 1.33,
+   "k_lo": 1.23,
+   "k_hi": 1.44
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 12,
+   "pass": "D",
+   "k": 1.11,
+   "k_lo": 1.02,
+   "k_hi": 1.2
+  },
+  {
+   "kind": "terra_to_aqua",
+   "month": 12,
+   "pass": "N",
+   "k": 1.39,
+   "k_lo": 1.28,
+   "k_hi": 1.5
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 1,
+   "pass": "D",
+   "k": 1.16,
+   "k_lo": 1.07,
+   "k_hi": 1.26
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 1,
+   "pass": "N",
+   "k": 1.46,
+   "k_lo": 1.34,
+   "k_hi": 1.57
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 2,
+   "pass": "D",
+   "k": 1.2,
+   "k_lo": 1.1,
+   "k_hi": 1.29
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 2,
+   "pass": "N",
+   "k": 1.5,
+   "k_lo": 1.38,
+   "k_hi": 1.62
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 3,
+   "pass": "D",
+   "k": 1.21,
+   "k_lo": 1.11,
+   "k_hi": 1.31
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 3,
+   "pass": "N",
+   "k": 1.51,
+   "k_lo": 1.39,
+   "k_hi": 1.63
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 4,
+   "pass": "D",
+   "k": 1.2,
+   "k_lo": 1.1,
+   "k_hi": 1.29
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 4,
+   "pass": "N",
+   "k": 1.5,
+   "k_lo": 1.38,
+   "k_hi": 1.62
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 5,
+   "pass": "D",
+   "k": 1.16,
+   "k_lo": 1.07,
+   "k_hi": 1.26
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 5,
+   "pass": "N",
+   "k": 1.46,
+   "k_lo": 1.34,
+   "k_hi": 1.57
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 6,
+   "pass": "D",
+   "k": 1.12,
+   "k_lo": 1.03,
+   "k_hi": 1.21
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 6,
+   "pass": "N",
+   "k": 1.4,
+   "k_lo": 1.29,
+   "k_hi": 1.51
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 7,
+   "pass": "D",
+   "k": 1.08,
+   "k_lo": 0.99,
+   "k_hi": 1.16
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 7,
+   "pass": "N",
+   "k": 1.34,
+   "k_lo": 1.24,
+   "k_hi": 1.45
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 8,
+   "pass": "D",
+   "k": 1.04,
+   "k_lo": 0.96,
+   "k_hi": 1.13
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 8,
+   "pass": "N",
+   "k": 1.3,
+   "k_lo": 1.2,
+   "k_hi": 1.41
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 9,
+   "pass": "D",
+   "k": 1.03,
+   "k_lo": 0.95,
+   "k_hi": 1.11
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 9,
+   "pass": "N",
+   "k": 1.29,
+   "k_lo": 1.18,
+   "k_hi": 1.39
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 10,
+   "pass": "D",
+   "k": 1.04,
+   "k_lo": 0.96,
+   "k_hi": 1.13
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 10,
+   "pass": "N",
+   "k": 1.3,
+   "k_lo": 1.2,
+   "k_hi": 1.41
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 11,
+   "pass": "D",
+   "k": 1.08,
+   "k_lo": 0.99,
+   "k_hi": 1.16
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 11,
+   "pass": "N",
+   "k": 1.34,
+   "k_lo": 1.24,
+   "k_hi": 1.45
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 12,
+   "pass": "D",
+   "k": 1.12,
+   "k_lo": 1.03,
+   "k_hi": 1.21
+  },
+  {
+   "kind": "n20_to_snpp",
+   "month": 12,
+   "pass": "N",
+   "k": 1.4,
+   "k_lo": 1.29,
+   "k_hi": 1.51
+  }
+ ]
+}

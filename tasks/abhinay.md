@@ -4,11 +4,11 @@ Run the commands in order in Claude Code from the repo root. Each one ticks its 
 Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live (about 20:15), work against the mocks.
 
 ## /a1-frontend-setup (18:30–19:00)
-- [ ] `frontend/`: Vite + React + TypeScript
-- [ ] Dependencies: maplibre-gl, terra-draw (+ maplibre adapter), @observablehq/plot, @turf/circle, @turf/area
-- [ ] `src/api.ts`: typed client for every contract endpoint, with a `VITE_USE_MOCKS` switch
-- [ ] `src/mocks/*.json`: realistic fixtures that match the contract exactly
-- [ ] Layout shell: header, left panel (AOI + dates), main (map + charts)
+- [x] `frontend/`: Vite + React + TypeScript
+- [x] Dependencies: maplibre-gl, terra-draw (+ maplibre adapter), @observablehq/plot, @turf/circle, @turf/area
+- [x] `src/api.ts`: typed client for every contract endpoint, with a `VITE_USE_MOCKS` switch
+- [x] `src/mocks/*.json`: realistic fixtures that match the contract exactly
+- [x] Layout shell: header, left panel (AOI + dates), main (map + charts)
 
 ## /a2-map-aoi (19:00–20:15)
 - [ ] MapLibre map centred on India (free OSM/OpenFreeMap style, no key)

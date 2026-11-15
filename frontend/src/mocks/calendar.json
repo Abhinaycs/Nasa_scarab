@@ -1,0 +1,6863 @@
+{
+ "aoi": {
+  "area_km2": 25000,
+  "cells": 4810,
+  "resolution": 7
+ },
+ "unit": "fire cell-days (S-NPP VIIRS equivalent)",
+ "years": [
+  2000,
+  2001,
+  2002,
+  2003,
+  2004,
+  2005,
+  2006,
+  2007,
+  2008,
+  2009,
+  2010,
+  2011,
+  2012,
+  2013,
+  2014,
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "cells": [
+  {
+   "year": 2000,
+   "month": 11,
+   "value": 572,
+   "raw": {
+    "modis_terra": 214
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.784,
+   "k_lo": 2.506,
+   "k_hi": 3.062,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 103.6,
+    "robust_z": 0.22,
+    "percentile": 60,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2000,
+   "month": 12,
+   "value": 70,
+   "raw": {
+    "modis_terra": 22
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.9,
+   "k_lo": 2.61,
+   "k_hi": 3.19,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 104.5,
+    "robust_z": 0.25,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.016,
+   "k_lo": 2.714,
+   "k_hi": 3.318,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.1010000000000004,
+   "k_lo": 2.7910000000000004,
+   "k_hi": 3.411,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 3,
+   "value": 12,
+   "raw": {
+    "modis_terra": 4
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.1319999999999997,
+   "k_lo": 2.819,
+   "k_hi": 3.445,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 85.7,
+    "robust_z": -0.67,
+    "percentile": 30,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 4,
+   "value": 107,
+   "raw": {
+    "modis_terra": 39
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.1010000000000004,
+   "k_lo": 2.7910000000000004,
+   "k_hi": 3.411,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 96.4,
+    "robust_z": -0.13,
+    "percentile": 36,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 5,
+   "value": 259,
+   "raw": {
+    "modis_terra": 98
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.016,
+   "k_lo": 2.714,
+   "k_hi": 3.318,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 104.4,
+    "robust_z": 0.2,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 6,
+   "value": 37,
+   "raw": {
+    "modis_terra": 12
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.9,
+   "k_lo": 2.61,
+   "k_hi": 3.19,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 50,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 7,
+   "value": 4,
+   "raw": {
+    "modis_terra": 2
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.784,
+   "k_lo": 2.506,
+   "k_hi": 3.062,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -2,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.699,
+   "k_lo": 2.4290000000000003,
+   "k_hi": 2.969,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2001,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.668,
+   "k_lo": 2.401,
+   "k_hi": 2.935,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 10,
+   "value": 452,
+   "raw": {
+    "modis_terra": 145
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.699,
+   "k_lo": 2.4290000000000003,
+   "k_hi": 2.969,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 126.6,
+    "robust_z": 2.02,
+    "percentile": 92,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 11,
+   "value": 602,
+   "raw": {
+    "modis_terra": 187
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.784,
+   "k_lo": 2.506,
+   "k_hi": 3.062,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 109.1,
+    "robust_z": 0.54,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2001,
+   "month": 12,
+   "value": 64,
+   "raw": {
+    "modis_terra": 23
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.9,
+   "k_lo": 2.61,
+   "k_hi": 3.19,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 95.5,
+    "robust_z": -0.27,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 1,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.016,
+   "k_lo": 2.714,
+   "k_hi": 3.318,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.5,
+    "robust_z": -1,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.1010000000000004,
+   "k_lo": 2.7910000000000004,
+   "k_hi": 3.411,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.1319999999999997,
+   "k_lo": 2.819,
+   "k_hi": 3.445,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 4,
+   "value": 125,
+   "raw": {
+    "modis_terra": 40
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.1010000000000004,
+   "k_lo": 2.7910000000000004,
+   "k_hi": 3.411,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 113.6,
+    "robust_z": 0.5,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 5,
+   "value": 209,
+   "raw": {
+    "modis_terra": 72
+   },
+   "source": "modis_terra_scaled",
+   "k": 3.016,
+   "k_lo": 2.714,
+   "k_hi": 3.318,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 84.3,
+    "robust_z": -0.8,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 6,
+   "value": 35,
+   "raw": {
+    "modis_terra": 13
+   },
+   "source": "modis_terra_scaled",
+   "k": 2.9,
+   "k_lo": 2.61,
+   "k_hi": 3.19,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 94.6,
+    "robust_z": -0.33,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 7,
+   "value": 7,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.7,
+    "robust_z": 1,
+    "percentile": 94,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2002,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 10,
+   "value": 362,
+   "raw": {
+    "modis_terra": 130,
+    "modis_aqua": 143
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 101.4,
+    "robust_z": 0.09,
+    "percentile": 60,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 11,
+   "value": 464,
+   "raw": {
+    "modis_terra": 160,
+    "modis_aqua": 172
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.2,
+    "robust_z": -1.01,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2002,
+   "month": 12,
+   "value": 57,
+   "raw": {
+    "modis_terra": 20,
+    "modis_aqua": 20
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 85.1,
+    "robust_z": -0.91,
+    "percentile": 8,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 1,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 75,
+    "robust_z": -2,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 3,
+   "value": 13,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 5
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.9,
+    "robust_z": -0.33,
+    "percentile": 42,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 4,
+   "value": 98,
+   "raw": {
+    "modis_terra": 33,
+    "modis_aqua": 36
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 88.3,
+    "robust_z": -0.45,
+    "percentile": 16,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 5,
+   "value": 251,
+   "raw": {
+    "modis_terra": 89,
+    "modis_aqua": 91
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 101.2,
+    "robust_z": 0.05,
+    "percentile": 60,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 6,
+   "value": 36,
+   "raw": {
+    "modis_terra": 12,
+    "modis_aqua": 13
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 97.3,
+    "robust_z": -0.17,
+    "percentile": 42,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 8,
+   "value": 4,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 133.3,
+    "robust_z": 1,
+    "percentile": 100,
+    "label": null
+   }
+  },
+  {
+   "year": 2003,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 10,
+   "value": 325,
+   "raw": {
+    "modis_terra": 106,
+    "modis_aqua": 127
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90.5,
+    "robust_z": -0.6,
+    "percentile": 28,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 11,
+   "value": 525,
+   "raw": {
+    "modis_terra": 194,
+    "modis_aqua": 214
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 94.1,
+    "robust_z": -0.35,
+    "percentile": 36,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2003,
+   "month": 12,
+   "value": 48,
+   "raw": {
+    "modis_terra": 17,
+    "modis_aqua": 18
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 71.6,
+    "robust_z": -1.73,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 6
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 4,
+   "value": 119,
+   "raw": {
+    "modis_terra": 42,
+    "modis_aqua": 45
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 108.2,
+    "robust_z": 0.3,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 5,
+   "value": 289,
+   "raw": {
+    "modis_terra": 105,
+    "modis_aqua": 104
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.5,
+    "robust_z": 0.79,
+    "percentile": 82,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 6,
+   "value": 31,
+   "raw": {
+    "modis_terra": 12,
+    "modis_aqua": 11
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.8,
+    "robust_z": -1.2,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2004,
+   "month": 9,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 80,
+    "robust_z": -2,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 10,
+   "value": 317,
+   "raw": {
+    "modis_terra": 106,
+    "modis_aqua": 115
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 88.3,
+    "robust_z": -0.75,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 11,
+   "value": 578,
+   "raw": {
+    "modis_terra": 219,
+    "modis_aqua": 232
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 104.7,
+    "robust_z": 0.28,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2004,
+   "month": 12,
+   "value": 61,
+   "raw": {
+    "modis_terra": 19,
+    "modis_aqua": 24
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 91,
+    "robust_z": -0.55,
+    "percentile": 16,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 1,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.5,
+    "robust_z": -1,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 2,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.7,
+    "robust_z": 1,
+    "percentile": 94,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 3,
+   "value": 11,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 78.6,
+    "robust_z": -1.5,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 4,
+   "value": 139,
+   "raw": {
+    "modis_terra": 44,
+    "modis_aqua": 58
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 126.4,
+    "robust_z": 1.07,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 5,
+   "value": 240,
+   "raw": {
+    "modis_terra": 89,
+    "modis_aqua": 84
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 96.8,
+    "robust_z": -0.15,
+    "percentile": 44,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 6,
+   "value": 39,
+   "raw": {
+    "modis_terra": 12,
+    "modis_aqua": 14
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 105.4,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2005,
+   "month": 9,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 80,
+    "robust_z": -2,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 10,
+   "value": 299,
+   "raw": {
+    "modis_terra": 96,
+    "modis_aqua": 109
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1.07,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 11,
+   "value": 527,
+   "raw": {
+    "modis_terra": 167,
+    "modis_aqua": 197
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 94.4,
+    "robust_z": -0.33,
+    "percentile": 40,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2005,
+   "month": 12,
+   "value": 47,
+   "raw": {
+    "modis_terra": 18,
+    "modis_aqua": 17
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 70.1,
+    "robust_z": -1.82,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 3,
+   "value": 15,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 115.4,
+    "robust_z": 0.67,
+    "percentile": 90,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 4,
+   "value": 114,
+   "raw": {
+    "modis_terra": 36,
+    "modis_aqua": 46
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 103.6,
+    "robust_z": 0.13,
+    "percentile": 56,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 5,
+   "value": 192,
+   "raw": {
+    "modis_terra": 67,
+    "modis_aqua": 79
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 77.4,
+    "robust_z": -1.14,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 6,
+   "value": 42,
+   "raw": {
+    "modis_terra": 15,
+    "modis_aqua": 15
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 113.5,
+    "robust_z": 0.83,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2006,
+   "month": 9,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 5
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110,
+    "robust_z": 1,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 10,
+   "value": 357,
+   "raw": {
+    "modis_terra": 123,
+    "modis_aqua": 133
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 99.4,
+    "robust_z": -0.04,
+    "percentile": 48,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 11,
+   "value": 475,
+   "raw": {
+    "modis_terra": 169,
+    "modis_aqua": 199
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 85.1,
+    "robust_z": -0.89,
+    "percentile": 8,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2006,
+   "month": 12,
+   "value": 71,
+   "raw": {
+    "modis_terra": 23,
+    "modis_aqua": 27
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 106,
+    "robust_z": 0.33,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 4,
+   "value": 111,
+   "raw": {
+    "modis_terra": 42,
+    "modis_aqua": 45
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100.9,
+    "robust_z": 0.03,
+    "percentile": 52,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 5,
+   "value": 222,
+   "raw": {
+    "modis_terra": 78,
+    "modis_aqua": 82
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 89.5,
+    "robust_z": -0.53,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 6,
+   "value": 32,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 13
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 86.5,
+    "robust_z": -1,
+    "percentile": 8,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2007,
+   "month": 9,
+   "value": 12,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 5
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 120,
+    "robust_z": 2,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 10,
+   "value": 381,
+   "raw": {
+    "modis_terra": 119,
+    "modis_aqua": 133
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 106.7,
+    "robust_z": 0.51,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 11,
+   "value": 523,
+   "raw": {
+    "modis_terra": 178,
+    "modis_aqua": 186
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 93.7,
+    "robust_z": -0.38,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2007,
+   "month": 12,
+   "value": 67,
+   "raw": {
+    "modis_terra": 21,
+    "modis_aqua": 23
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 48,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 1,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.5,
+    "robust_z": -1,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 3,
+   "value": 17,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 7
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 130.8,
+    "robust_z": 1.33,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 4,
+   "value": 134,
+   "raw": {
+    "modis_terra": 47,
+    "modis_aqua": 53
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 121.8,
+    "robust_z": 0.89,
+    "percentile": 92,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 5,
+   "value": 237,
+   "raw": {
+    "modis_terra": 74,
+    "modis_aqua": 92
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 95.6,
+    "robust_z": -0.2,
+    "percentile": 36,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 6,
+   "value": 35,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 15
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 94.6,
+    "robust_z": -0.33,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2008,
+   "month": 9,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 80,
+    "robust_z": -2,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 10,
+   "value": 562,
+   "raw": {
+    "modis_terra": 195,
+    "modis_aqua": 234
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 157.4,
+    "robust_z": 4.36,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 11,
+   "value": 515,
+   "raw": {
+    "modis_terra": 169,
+    "modis_aqua": 196
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.3,
+    "robust_z": -0.46,
+    "percentile": 16,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2008,
+   "month": 12,
+   "value": 93,
+   "raw": {
+    "modis_terra": 29,
+    "modis_aqua": 34
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 138.8,
+    "robust_z": 2.17,
+    "percentile": 96,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 3,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 78.6,
+    "robust_z": -1.5,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 4,
+   "value": 127,
+   "raw": {
+    "modis_terra": 42,
+    "modis_aqua": 53
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 115.5,
+    "robust_z": 0.57,
+    "percentile": 72,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 5,
+   "value": 291,
+   "raw": {
+    "modis_terra": 105,
+    "modis_aqua": 121
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 117.3,
+    "robust_z": 0.83,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 6,
+   "value": 40,
+   "raw": {
+    "modis_terra": 12,
+    "modis_aqua": 14
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 108.1,
+    "robust_z": 0.5,
+    "percentile": 74,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2009,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 10,
+   "value": 321,
+   "raw": {
+    "modis_terra": 122,
+    "modis_aqua": 125
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 89.4,
+    "robust_z": -0.68,
+    "percentile": 20,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 11,
+   "value": 618,
+   "raw": {
+    "modis_terra": 210,
+    "modis_aqua": 228
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 112,
+    "robust_z": 0.76,
+    "percentile": 80,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2009,
+   "month": 12,
+   "value": 76,
+   "raw": {
+    "modis_terra": 25,
+    "modis_aqua": 32
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 113.4,
+    "robust_z": 0.75,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 4,
+   "value": 97,
+   "raw": {
+    "modis_terra": 34,
+    "modis_aqua": 38
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.4,
+    "robust_z": -0.48,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 5,
+   "value": 320,
+   "raw": {
+    "modis_terra": 119,
+    "modis_aqua": 135
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 129,
+    "robust_z": 1.38,
+    "percentile": 92,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 6,
+   "value": 34,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 13
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 91.9,
+    "robust_z": -0.6,
+    "percentile": 20,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2010,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 10,
+   "value": 324,
+   "raw": {
+    "modis_terra": 107,
+    "modis_aqua": 134
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90.3,
+    "robust_z": -0.62,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 11,
+   "value": 643,
+   "raw": {
+    "modis_terra": 219,
+    "modis_aqua": 251
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.5,
+    "robust_z": 1.05,
+    "percentile": 92,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2010,
+   "month": 12,
+   "value": 66,
+   "raw": {
+    "modis_terra": 22,
+    "modis_aqua": 26
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 98.5,
+    "robust_z": -0.08,
+    "percentile": 38,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 2,
+   "value": 7,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.7,
+    "robust_z": 1,
+    "percentile": 94,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 3,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.8080000000000003,
+   "k_lo": 2.5269999999999997,
+   "k_hi": 3.089,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 78.6,
+    "robust_z": -1.5,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 4,
+   "value": 99,
+   "raw": {
+    "modis_terra": 36,
+    "modis_aqua": 41
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.78,
+   "k_lo": 2.502,
+   "k_hi": 3.0580000000000003,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 89.2,
+    "robust_z": -0.41,
+    "percentile": 20,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 5,
+   "value": 249,
+   "raw": {
+    "modis_terra": 90,
+    "modis_aqua": 91
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.7039999999999997,
+   "k_lo": 2.434,
+   "k_hi": 2.9739999999999998,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100.4,
+    "robust_z": 0.02,
+    "percentile": 56,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 6,
+   "value": 41,
+   "raw": {
+    "modis_terra": 13,
+    "modis_aqua": 14
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110.8,
+    "robust_z": 0.67,
+    "percentile": 82,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2011,
+   "month": 9,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.392,
+   "k_lo": 2.153,
+   "k_hi": 2.6310000000000002,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110,
+    "robust_z": 1,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 10,
+   "value": 317,
+   "raw": {
+    "modis_terra": 104,
+    "modis_aqua": 113
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.42,
+   "k_lo": 2.178,
+   "k_hi": 2.662,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 88.3,
+    "robust_z": -0.75,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 11,
+   "value": 632,
+   "raw": {
+    "modis_terra": 199,
+    "modis_aqua": 252
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.496,
+   "k_lo": 2.246,
+   "k_hi": 2.7460000000000004,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 114.5,
+    "robust_z": 0.92,
+    "percentile": 84,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2011,
+   "month": 12,
+   "value": 96,
+   "raw": {
+    "modis_terra": 30,
+    "modis_aqua": 35
+   },
+   "source": "modis_aqua_scaled",
+   "k": 2.6,
+   "k_lo": 2.34,
+   "k_hi": 2.86,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 143.3,
+    "robust_z": 2.42,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5,
+    "viirs_snpp": 14
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 4,
+   "value": 100,
+   "raw": {
+    "modis_terra": 32,
+    "modis_aqua": 36,
+    "viirs_snpp": 100
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90.1,
+    "robust_z": -0.38,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 5,
+   "value": 472,
+   "raw": {
+    "modis_terra": 164,
+    "modis_aqua": 168,
+    "viirs_snpp": 472
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 190.3,
+    "robust_z": 4.31,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 6,
+   "value": 37,
+   "raw": {
+    "modis_terra": 13,
+    "modis_aqua": 15,
+    "viirs_snpp": 37
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 50,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2012,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 10,
+   "value": 366,
+   "raw": {
+    "modis_terra": 118,
+    "modis_aqua": 135,
+    "viirs_snpp": 366
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 102.5,
+    "robust_z": 0.16,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 11,
+   "value": 551,
+   "raw": {
+    "modis_terra": 188,
+    "modis_aqua": 212,
+    "viirs_snpp": 551
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 98.7,
+    "robust_z": -0.08,
+    "percentile": 44,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2012,
+   "month": 12,
+   "value": 65,
+   "raw": {
+    "modis_terra": 23,
+    "modis_aqua": 27,
+    "viirs_snpp": 65
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 97,
+    "robust_z": -0.17,
+    "percentile": 30,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 1,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 75,
+    "robust_z": -2,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5,
+    "viirs_snpp": 14
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 4,
+   "value": 101,
+   "raw": {
+    "modis_terra": 35,
+    "modis_aqua": 35,
+    "viirs_snpp": 101
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 91,
+    "robust_z": -0.33,
+    "percentile": 28,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 5,
+   "value": 218,
+   "raw": {
+    "modis_terra": 75,
+    "modis_aqua": 87,
+    "viirs_snpp": 218
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.9,
+    "robust_z": -0.61,
+    "percentile": 16,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 6,
+   "value": 48,
+   "raw": {
+    "modis_terra": 15,
+    "modis_aqua": 17,
+    "viirs_snpp": 48
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 129.7,
+    "robust_z": 1.83,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 7,
+   "value": 7,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.7,
+    "robust_z": 1,
+    "percentile": 94,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2013,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 10,
+   "value": 359,
+   "raw": {
+    "modis_terra": 127,
+    "modis_aqua": 132,
+    "viirs_snpp": 359
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100.6,
+    "robust_z": 0.04,
+    "percentile": 54,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 11,
+   "value": 636,
+   "raw": {
+    "modis_terra": 222,
+    "modis_aqua": 257,
+    "viirs_snpp": 636
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 115.2,
+    "robust_z": 0.97,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2013,
+   "month": 12,
+   "value": 87,
+   "raw": {
+    "modis_terra": 29,
+    "modis_aqua": 33,
+    "viirs_snpp": 87
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 129.9,
+    "robust_z": 1.67,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 6,
+    "viirs_snpp": 14
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 4,
+   "value": 97,
+   "raw": {
+    "modis_terra": 34,
+    "modis_aqua": 35,
+    "viirs_snpp": 97
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.4,
+    "robust_z": -0.48,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 5,
+   "value": 239,
+   "raw": {
+    "modis_terra": 79,
+    "modis_aqua": 86,
+    "viirs_snpp": 239
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 96.4,
+    "robust_z": -0.16,
+    "percentile": 40,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 6,
+   "value": 36,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 15,
+    "viirs_snpp": 36
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 97.3,
+    "robust_z": -0.17,
+    "percentile": 42,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2014,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4,
+    "viirs_snpp": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 10,
+   "value": 359,
+   "raw": {
+    "modis_terra": 136,
+    "modis_aqua": 142,
+    "viirs_snpp": 359
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100.6,
+    "robust_z": 0.04,
+    "percentile": 54,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 11,
+   "value": 517,
+   "raw": {
+    "modis_terra": 163,
+    "modis_aqua": 207,
+    "viirs_snpp": 517
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.7,
+    "robust_z": -0.44,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2014,
+   "month": 12,
+   "value": 89,
+   "raw": {
+    "modis_terra": 28,
+    "modis_aqua": 36,
+    "viirs_snpp": 89
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 132.8,
+    "robust_z": 1.83,
+    "percentile": 92,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 3,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 11
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 78.6,
+    "robust_z": -1.5,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 4,
+   "value": 131,
+   "raw": {
+    "modis_terra": 44,
+    "modis_aqua": 52,
+    "viirs_snpp": 131
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 119.1,
+    "robust_z": 0.78,
+    "percentile": 80,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 5,
+   "value": 352,
+   "raw": {
+    "modis_terra": 111,
+    "modis_aqua": 122,
+    "viirs_snpp": 352
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 141.9,
+    "robust_z": 2,
+    "percentile": 96,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 6,
+   "value": 34,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 14,
+    "viirs_snpp": 34
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 91.9,
+    "robust_z": -0.6,
+    "percentile": 20,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 2
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2015,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 10,
+   "value": 384,
+   "raw": {
+    "modis_terra": 121,
+    "modis_aqua": 150,
+    "viirs_snpp": 384
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.6,
+    "robust_z": 0.57,
+    "percentile": 84,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 11,
+   "value": 604,
+   "raw": {
+    "modis_terra": 207,
+    "modis_aqua": 214,
+    "viirs_snpp": 604
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 109.4,
+    "robust_z": 0.56,
+    "percentile": 72,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2015,
+   "month": 12,
+   "value": 76,
+   "raw": {
+    "modis_terra": 28,
+    "modis_aqua": 29,
+    "viirs_snpp": 76
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 113.4,
+    "robust_z": 0.75,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 1,
+   "value": 7,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.5,
+    "robust_z": -1,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 3,
+   "value": 14,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5,
+    "viirs_snpp": 14
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.7,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 4,
+   "value": 132,
+   "raw": {
+    "modis_terra": 41,
+    "modis_aqua": 48,
+    "viirs_snpp": 132
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 120,
+    "robust_z": 0.81,
+    "percentile": 86,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 5,
+   "value": 215,
+   "raw": {
+    "modis_terra": 72,
+    "modis_aqua": 79,
+    "viirs_snpp": 215
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 86.7,
+    "robust_z": -0.67,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 6,
+   "value": 40,
+   "raw": {
+    "modis_terra": 13,
+    "modis_aqua": 16,
+    "viirs_snpp": 40
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 108.1,
+    "robust_z": 0.5,
+    "percentile": 74,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2016,
+   "month": 9,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 11
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110,
+    "robust_z": 1,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 10,
+   "value": 436,
+   "raw": {
+    "modis_terra": 155,
+    "modis_aqua": 165,
+    "viirs_snpp": 436
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 122.1,
+    "robust_z": 1.68,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 11,
+   "value": 1142,
+   "raw": {
+    "modis_terra": 358,
+    "modis_aqua": 470,
+    "viirs_snpp": 1142
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 206.9,
+    "robust_z": 6.78,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2016,
+   "month": 12,
+   "value": 67,
+   "raw": {
+    "modis_terra": 24,
+    "modis_aqua": 24,
+    "viirs_snpp": 67
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 48,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 1,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 9
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 112.5,
+    "robust_z": 1,
+    "percentile": 98,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 2,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 3,
+    "viirs_snpp": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.7,
+    "robust_z": 1,
+    "percentile": 94,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 3,
+   "value": 15,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 6,
+    "viirs_snpp": 15
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 115.4,
+    "robust_z": 0.67,
+    "percentile": 90,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 4,
+   "value": 132,
+   "raw": {
+    "modis_terra": 45,
+    "modis_aqua": 51,
+    "viirs_snpp": 132
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 120,
+    "robust_z": 0.81,
+    "percentile": 86,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 5,
+   "value": 277,
+   "raw": {
+    "modis_terra": 88,
+    "modis_aqua": 96,
+    "viirs_snpp": 277
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 111.7,
+    "robust_z": 0.56,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 6,
+   "value": 38,
+   "raw": {
+    "modis_terra": 14,
+    "modis_aqua": 14,
+    "viirs_snpp": 38
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 102.7,
+    "robust_z": 0.17,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2017,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 10,
+   "value": 300,
+   "raw": {
+    "modis_terra": 94,
+    "modis_aqua": 109,
+    "viirs_snpp": 300
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.6,
+    "robust_z": -1.05,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 11,
+   "value": 558,
+   "raw": {
+    "modis_terra": 189,
+    "modis_aqua": 212,
+    "viirs_snpp": 558
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 101.1,
+    "robust_z": 0.06,
+    "percentile": 52,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2017,
+   "month": 12,
+   "value": 64,
+   "raw": {
+    "modis_terra": 21,
+    "modis_aqua": 25,
+    "viirs_snpp": 64
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 95.5,
+    "robust_z": -0.27,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 1,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 75,
+    "robust_z": -2,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 3,
+   "value": 15,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 6,
+    "viirs_snpp": 15,
+    "viirs_noaa20": 13
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 115.4,
+    "robust_z": 0.67,
+    "percentile": 90,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 4,
+   "value": 118,
+   "raw": {
+    "modis_terra": 38,
+    "modis_aqua": 49,
+    "viirs_snpp": 118,
+    "viirs_noaa20": 103
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107.3,
+    "robust_z": 0.27,
+    "percentile": 60,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 5,
+   "value": 228,
+   "raw": {
+    "modis_terra": 79,
+    "modis_aqua": 83,
+    "viirs_snpp": 228,
+    "viirs_noaa20": 204
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 91.9,
+    "robust_z": -0.36,
+    "percentile": 28,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 6,
+   "value": 27,
+   "raw": {
+    "modis_terra": 9,
+    "modis_aqua": 9,
+    "viirs_snpp": 27,
+    "viirs_noaa20": 25
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 73,
+    "robust_z": -2,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3,
+    "viirs_noaa20": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2018,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 9,
+    "viirs_noaa20": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 10,
+   "value": 382,
+   "raw": {
+    "modis_terra": 131,
+    "modis_aqua": 147,
+    "viirs_snpp": 382,
+    "viirs_noaa20": 343
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 107,
+    "robust_z": 0.53,
+    "percentile": 80,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 11,
+   "value": 610,
+   "raw": {
+    "modis_terra": 224,
+    "modis_aqua": 218,
+    "viirs_snpp": 610,
+    "viirs_noaa20": 546
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110.5,
+    "robust_z": 0.67,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2018,
+   "month": 12,
+   "value": 60,
+   "raw": {
+    "modis_terra": 23,
+    "modis_aqua": 22,
+    "viirs_snpp": 60,
+    "viirs_noaa20": 53
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 89.6,
+    "robust_z": -0.64,
+    "percentile": 12,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8,
+    "viirs_noaa20": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 3,
+   "value": 10,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 10,
+    "viirs_noaa20": 9
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 71.4,
+    "robust_z": -2,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 4,
+   "value": 130,
+   "raw": {
+    "modis_terra": 45,
+    "modis_aqua": 55,
+    "viirs_snpp": 130,
+    "viirs_noaa20": 112
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 118.2,
+    "robust_z": 0.74,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 5,
+   "value": 221,
+   "raw": {
+    "modis_terra": 74,
+    "modis_aqua": 88,
+    "viirs_snpp": 221,
+    "viirs_noaa20": 209
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 89.1,
+    "robust_z": -0.55,
+    "percentile": 20,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 6,
+   "value": 44,
+   "raw": {
+    "modis_terra": 15,
+    "modis_aqua": 16,
+    "viirs_snpp": 44,
+    "viirs_noaa20": 38
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 118.9,
+    "robust_z": 1.17,
+    "percentile": 92,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 7,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8,
+    "viirs_noaa20": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 133.3,
+    "robust_z": 2,
+    "percentile": 100,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3,
+    "viirs_noaa20": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2019,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 9,
+    "viirs_noaa20": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 10,
+   "value": 350,
+   "raw": {
+    "modis_terra": 114,
+    "modis_aqua": 135,
+    "viirs_snpp": 350,
+    "viirs_noaa20": 307
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 97.5,
+    "robust_z": -0.16,
+    "percentile": 40,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 11,
+   "value": 517,
+   "raw": {
+    "modis_terra": 165,
+    "modis_aqua": 200,
+    "viirs_snpp": 517,
+    "viirs_noaa20": 487
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.7,
+    "robust_z": -0.44,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2019,
+   "month": 12,
+   "value": 70,
+   "raw": {
+    "modis_terra": 23,
+    "modis_aqua": 27,
+    "viirs_snpp": 70,
+    "viirs_noaa20": 66
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 104.5,
+    "robust_z": 0.25,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8,
+    "viirs_noaa20": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 3,
+   "value": 15,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 6,
+    "viirs_snpp": 15,
+    "viirs_noaa20": 14
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 115.4,
+    "robust_z": 0.67,
+    "percentile": 90,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 4,
+   "value": 44,
+   "raw": {
+    "modis_terra": 16,
+    "modis_aqua": 16,
+    "viirs_snpp": 44,
+    "viirs_noaa20": 39
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 39.6,
+    "robust_z": -2.31,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 5,
+   "value": 248,
+   "raw": {
+    "modis_terra": 77,
+    "modis_aqua": 91,
+    "viirs_snpp": 248,
+    "viirs_noaa20": 216
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 50,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 6,
+   "value": 46,
+   "raw": {
+    "modis_terra": 15,
+    "modis_aqua": 16,
+    "viirs_snpp": 46,
+    "viirs_noaa20": 43
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 124.3,
+    "robust_z": 1.5,
+    "percentile": 96,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 2,
+    "viirs_noaa20": 2
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2020,
+   "month": 9,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 11,
+    "viirs_noaa20": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110,
+    "robust_z": 1,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 10,
+   "value": 371,
+   "raw": {
+    "modis_terra": 136,
+    "modis_aqua": 147,
+    "viirs_snpp": 371,
+    "viirs_noaa20": 322
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 103.9,
+    "robust_z": 0.25,
+    "percentile": 72,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 11,
+   "value": 552,
+   "raw": {
+    "modis_terra": 188,
+    "modis_aqua": 228,
+    "viirs_snpp": 552,
+    "viirs_noaa20": 489
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 98.9,
+    "robust_z": -0.06,
+    "percentile": 48,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2020,
+   "month": 12,
+   "value": 65,
+   "raw": {
+    "modis_terra": 21,
+    "modis_aqua": 27,
+    "viirs_snpp": 65,
+    "viirs_noaa20": 61
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 97,
+    "robust_z": -0.17,
+    "percentile": 30,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 1,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 75,
+    "robust_z": -2,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 3,
+   "value": 13,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5,
+    "viirs_snpp": 13,
+    "viirs_noaa20": 12
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.9,
+    "robust_z": -0.33,
+    "percentile": 42,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 4,
+   "value": 108,
+   "raw": {
+    "modis_terra": 36,
+    "modis_aqua": 38,
+    "viirs_snpp": 108,
+    "viirs_noaa20": 102
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 97.3,
+    "robust_z": -0.1,
+    "percentile": 40,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 5,
+   "value": 215,
+   "raw": {
+    "modis_terra": 80,
+    "modis_aqua": 78,
+    "viirs_snpp": 215,
+    "viirs_noaa20": 198
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 86.7,
+    "robust_z": -0.67,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 6,
+   "value": 35,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 15,
+    "viirs_snpp": 35,
+    "viirs_noaa20": 33
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 94.6,
+    "robust_z": -0.33,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 2,
+    "viirs_noaa20": 2
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2021,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4,
+    "viirs_snpp": 10,
+    "viirs_noaa20": 9
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 10,
+   "value": 458,
+   "raw": {
+    "modis_terra": 158,
+    "modis_aqua": 185,
+    "viirs_snpp": 458,
+    "viirs_noaa20": 417
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 128.3,
+    "robust_z": 2.15,
+    "percentile": 96,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 11,
+   "value": 484,
+   "raw": {
+    "modis_terra": 150,
+    "modis_aqua": 189,
+    "viirs_snpp": 484,
+    "viirs_noaa20": 414
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 86.7,
+    "robust_z": -0.8,
+    "percentile": 12,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2021,
+   "month": 12,
+   "value": 76,
+   "raw": {
+    "modis_terra": 24,
+    "modis_aqua": 30,
+    "viirs_snpp": 76,
+    "viirs_noaa20": 69
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 113.4,
+    "robust_z": 0.75,
+    "percentile": 76,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 1,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 3,
+    "viirs_snpp": 7,
+    "viirs_noaa20": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 87.5,
+    "robust_z": -1,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 3,
+   "value": 13,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 5,
+    "viirs_snpp": 13,
+    "viirs_noaa20": 11
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.9,
+    "robust_z": -0.33,
+    "percentile": 42,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 4,
+   "value": 95,
+   "raw": {
+    "modis_terra": 35,
+    "modis_aqua": 36,
+    "viirs_snpp": 95,
+    "viirs_noaa20": 83
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 85.6,
+    "robust_z": -0.55,
+    "percentile": 4,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 5,
+   "value": 274,
+   "raw": {
+    "modis_terra": 100,
+    "modis_aqua": 102,
+    "viirs_snpp": 274,
+    "viirs_noaa20": 257
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110.5,
+    "robust_z": 0.47,
+    "percentile": 72,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 6,
+   "value": 34,
+   "raw": {
+    "modis_terra": 12,
+    "modis_aqua": 14,
+    "viirs_snpp": 34,
+    "viirs_noaa20": 32
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 91.9,
+    "robust_z": -0.6,
+    "percentile": 20,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3,
+    "viirs_noaa20": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2022,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 9,
+    "viirs_noaa20": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 10,
+   "value": 345,
+   "raw": {
+    "modis_terra": 119,
+    "modis_aqua": 140,
+    "viirs_snpp": 345,
+    "viirs_noaa20": 308
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 96.1,
+    "robust_z": -0.25,
+    "percentile": 36,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 11,
+   "value": 517,
+   "raw": {
+    "modis_terra": 177,
+    "modis_aqua": 190,
+    "viirs_snpp": 517,
+    "viirs_noaa20": 490
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.7,
+    "robust_z": -0.44,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2022,
+   "month": 12,
+   "value": 67,
+   "raw": {
+    "modis_terra": 24,
+    "modis_aqua": 26,
+    "viirs_snpp": 67,
+    "viirs_noaa20": 58
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 48,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 1,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 75,
+    "robust_z": -2,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 2,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 3,
+   "value": 13,
+   "raw": {
+    "modis_terra": 5,
+    "modis_aqua": 5,
+    "viirs_snpp": 13,
+    "viirs_noaa20": 12
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.9,
+    "robust_z": -0.33,
+    "percentile": 42,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 4,
+   "value": 138,
+   "raw": {
+    "modis_terra": 49,
+    "modis_aqua": 56,
+    "viirs_snpp": 138,
+    "viirs_noaa20": 120
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 125.5,
+    "robust_z": 1.04,
+    "percentile": 96,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 5,
+   "value": 271,
+   "raw": {
+    "modis_terra": 94,
+    "modis_aqua": 110,
+    "viirs_snpp": 271,
+    "viirs_noaa20": 257
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 109.3,
+    "robust_z": 0.42,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 6,
+   "value": 33,
+   "raw": {
+    "modis_terra": 11,
+    "modis_aqua": 13,
+    "viirs_snpp": 33,
+    "viirs_noaa20": 31
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 89.2,
+    "robust_z": -0.8,
+    "percentile": 12,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3,
+    "viirs_noaa20": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2023,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 10,
+    "viirs_noaa20": 9
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 10,
+   "value": 356,
+   "raw": {
+    "modis_terra": 127,
+    "modis_aqua": 144,
+    "viirs_snpp": 356,
+    "viirs_noaa20": 326
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 99.2,
+    "robust_z": -0.05,
+    "percentile": 44,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 11,
+   "value": 255,
+   "raw": {
+    "modis_terra": 84,
+    "modis_aqua": 100,
+    "viirs_snpp": 255,
+    "viirs_noaa20": 241
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 45.7,
+    "robust_z": -3.26,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2023,
+   "month": 12,
+   "value": 79,
+   "raw": {
+    "modis_terra": 27,
+    "modis_aqua": 29,
+    "viirs_snpp": 79,
+    "viirs_noaa20": 73
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 117.9,
+    "robust_z": 1,
+    "percentile": 84,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 1,
+   "value": 8,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 8,
+    "viirs_noaa20": 7
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 2,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 22,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 3,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 11,
+    "viirs_noaa20": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 78.6,
+    "robust_z": -1.5,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 4,
+   "value": 110,
+   "raw": {
+    "modis_terra": 40,
+    "modis_aqua": 39,
+    "viirs_snpp": 110,
+    "viirs_noaa20": 101
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 99.1,
+    "robust_z": -0.03,
+    "percentile": 48,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 5,
+   "value": 289,
+   "raw": {
+    "modis_terra": 92,
+    "modis_aqua": 105,
+    "viirs_snpp": 289,
+    "viirs_noaa20": 249
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.5,
+    "robust_z": 0.79,
+    "percentile": 82,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 6,
+   "value": 41,
+   "raw": {
+    "modis_terra": 15,
+    "modis_aqua": 15,
+    "viirs_snpp": 41,
+    "viirs_noaa20": 38
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 110.8,
+    "robust_z": 0.67,
+    "percentile": 82,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 7,
+   "value": 5,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 5,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 83.3,
+    "robust_z": -1,
+    "percentile": 18,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 8,
+   "value": 2,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 2,
+    "viirs_noaa20": 2
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -1,
+    "percentile": 14,
+    "label": null
+   }
+  },
+  {
+   "year": 2024,
+   "month": 9,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4,
+    "viirs_snpp": 9,
+    "viirs_noaa20": 8
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 90,
+    "robust_z": -1,
+    "percentile": 24,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 10,
+   "value": 337,
+   "raw": {
+    "modis_terra": 110,
+    "modis_aqua": 117,
+    "viirs_snpp": 337,
+    "viirs_noaa20": 291
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 93.9,
+    "robust_z": -0.39,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 11,
+   "value": 661,
+   "raw": {
+    "modis_terra": 219,
+    "modis_aqua": 268,
+    "viirs_snpp": 661,
+    "viirs_noaa20": 570
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 119.7,
+    "robust_z": 1.25,
+    "percentile": 96,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2024,
+   "month": 12,
+   "value": 73,
+   "raw": {
+    "modis_terra": 23,
+    "modis_aqua": 30,
+    "viirs_snpp": 73,
+    "viirs_noaa20": 63
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 109,
+    "robust_z": 0.5,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 1,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 75,
+    "robust_z": -2,
+    "percentile": 10,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 2,
+   "value": 7,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 3,
+    "viirs_snpp": 7,
+    "viirs_noaa20": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 116.7,
+    "robust_z": 1,
+    "percentile": 94,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 3,
+   "value": 12,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 12,
+    "viirs_noaa20": 10
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 85.7,
+    "robust_z": -0.67,
+    "percentile": 30,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 4,
+   "value": 104,
+   "raw": {
+    "modis_terra": 33,
+    "modis_aqua": 43,
+    "viirs_snpp": 104,
+    "viirs_noaa20": 95
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 93.7,
+    "robust_z": -0.23,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 5,
+   "value": 230,
+   "raw": {
+    "modis_terra": 86,
+    "modis_aqua": 87,
+    "viirs_snpp": 230,
+    "viirs_noaa20": 199
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 92.7,
+    "robust_z": -0.33,
+    "percentile": 32,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 6,
+   "value": 38,
+   "raw": {
+    "modis_terra": 14,
+    "modis_aqua": 13,
+    "viirs_snpp": 38,
+    "viirs_noaa20": 33
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 102.7,
+    "robust_z": 0.17,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 6
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3,
+    "viirs_noaa20": 3
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2025,
+   "month": 9,
+   "value": 10,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 4,
+    "viirs_snpp": 10,
+    "viirs_noaa20": 9
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 58,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 10,
+   "value": 369,
+   "raw": {
+    "modis_terra": 130,
+    "modis_aqua": 145,
+    "viirs_snpp": 369,
+    "viirs_noaa20": 343
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 103.4,
+    "robust_z": 0.21,
+    "percentile": 68,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 11,
+   "value": 563,
+   "raw": {
+    "modis_terra": 194,
+    "modis_aqua": 229,
+    "viirs_snpp": 563,
+    "viirs_noaa20": 531
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 102,
+    "robust_z": 0.12,
+    "percentile": 56,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2025,
+   "month": 12,
+   "value": 66,
+   "raw": {
+    "modis_terra": 23,
+    "modis_aqua": 28,
+    "viirs_snpp": 66,
+    "viirs_noaa20": 58
+   },
+   "source": "viirs_snpp",
+   "k": null,
+   "k_lo": null,
+   "k_hi": null,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 98.5,
+    "robust_z": -0.08,
+    "percentile": 38,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 1,
+   "value": 9,
+   "raw": {
+    "modis_terra": 3,
+    "modis_aqua": 3,
+    "viirs_snpp": 9,
+    "viirs_noaa20": 8
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.165,
+   "k_lo": 1.048,
+   "k_hi": 1.281,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 112.5,
+    "robust_z": 1,
+    "percentile": 98,
+    "label": "unusually high"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 2,
+   "value": 4,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 2,
+    "viirs_snpp": 4,
+    "viirs_noaa20": 4
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.198,
+   "k_lo": 1.078,
+   "k_hi": 1.317,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 66.7,
+    "robust_z": -2,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 3,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 11,
+    "viirs_noaa20": 10
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.21,
+   "k_lo": 1.089,
+   "k_hi": 1.331,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 78.6,
+    "robust_z": -1.5,
+    "percentile": 14,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 4,
+   "value": 109,
+   "raw": {
+    "modis_terra": 40,
+    "modis_aqua": 38,
+    "viirs_snpp": 106,
+    "viirs_noaa20": 97
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.198,
+   "k_lo": 1.078,
+   "k_hi": 1.317,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 98.2,
+    "robust_z": -0.07,
+    "percentile": 44,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 5,
+   "value": 248,
+   "raw": {
+    "modis_terra": 93,
+    "modis_aqua": 92,
+    "viirs_snpp": 236,
+    "viirs_noaa20": 221
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.165,
+   "k_lo": 1.048,
+   "k_hi": 1.281,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 50,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 6,
+   "value": 39,
+   "raw": {
+    "modis_terra": 13,
+    "modis_aqua": 14,
+    "viirs_snpp": 40,
+    "viirs_noaa20": 35
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.12,
+   "k_lo": 1.008,
+   "k_hi": 1.232,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 105.4,
+    "robust_z": 0.33,
+    "percentile": 66,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 7,
+   "value": 6,
+   "raw": {
+    "modis_terra": 2,
+    "modis_aqua": 2,
+    "viirs_snpp": 6,
+    "viirs_noaa20": 5
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.075,
+   "k_lo": 0.968,
+   "k_hi": 1.183,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 62,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 8,
+   "value": 3,
+   "raw": {
+    "modis_terra": 1,
+    "modis_aqua": 1,
+    "viirs_snpp": 3,
+    "viirs_noaa20": 3
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.042,
+   "k_lo": 0.938,
+   "k_hi": 1.147,
+   "provisional": false,
+   "anomaly": {
+    "pct_of_median": 100,
+    "robust_z": 0,
+    "percentile": 64,
+    "label": null
+   }
+  },
+  {
+   "year": 2026,
+   "month": 9,
+   "value": 11,
+   "raw": {
+    "modis_terra": 4,
+    "modis_aqua": 4,
+    "viirs_snpp": 11,
+    "viirs_noaa20": 10
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.03,
+   "k_lo": 0.927,
+   "k_hi": 1.133,
+   "provisional": true,
+   "anomaly": {
+    "pct_of_median": 110,
+    "robust_z": 1,
+    "percentile": 88,
+    "label": "normal"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 10,
+   "value": 316,
+   "raw": {
+    "modis_terra": 101,
+    "modis_aqua": 126,
+    "viirs_snpp": 309,
+    "viirs_noaa20": 282
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.042,
+   "k_lo": 0.938,
+   "k_hi": 1.147,
+   "provisional": true,
+   "anomaly": {
+    "pct_of_median": 88,
+    "robust_z": -0.77,
+    "percentile": 8,
+    "label": "unusually low"
+   }
+  },
+  {
+   "year": 2026,
+   "month": 11,
+   "value": 241,
+   "raw": {
+    "modis_terra": 78,
+    "modis_aqua": 88,
+    "viirs_snpp": 251,
+    "viirs_noaa20": 215
+   },
+   "source": "viirs_noaa20_scaled",
+   "k": 1.075,
+   "k_lo": 0.968,
+   "k_hi": 1.183,
+   "provisional": true,
+   "anomaly": {
+    "pct_of_median": 43.4,
+    "robust_z": -3.43,
+    "percentile": 0,
+    "label": "unusually low"
+   }
+  }
+ ],
+ "climatology": [
+  {
+   "month": 1,
+   "median": 8,
+   "q25": 7,
+   "q75": 8,
+   "p10": 6,
+   "p90": 8,
+   "min": 6,
+   "max": 9,
+   "mean": 7.4
+  },
+  {
+   "month": 2,
+   "median": 6,
+   "q25": 5,
+   "q75": 6,
+   "p10": 5,
+   "p90": 7,
+   "min": 4,
+   "max": 7,
+   "mean": 5.7
+  },
+  {
+   "month": 3,
+   "median": 13.5,
+   "q25": 11.3,
+   "q75": 14,
+   "p10": 11,
+   "p90": 15,
+   "min": 10,
+   "max": 17,
+   "mean": 13.1
+  },
+  {
+   "month": 4,
+   "median": 110.5,
+   "q25": 100.3,
+   "q75": 129.3,
+   "p10": 97,
+   "p90": 133,
+   "min": 44,
+   "max": 139,
+   "mean": 112.3
+  },
+  {
+   "month": 5,
+   "median": 248,
+   "q25": 223.5,
+   "q75": 276.3,
+   "p10": 215,
+   "p90": 305.5,
+   "min": 192,
+   "max": 472,
+   "mean": 259.8
+  },
+  {
+   "month": 6,
+   "median": 37,
+   "q25": 34.3,
+   "q75": 40,
+   "p10": 32.5,
+   "p90": 43,
+   "min": 27,
+   "max": 48,
+   "mean": 37.4
+  },
+  {
+   "month": 7,
+   "median": 6,
+   "q25": 5,
+   "q75": 6,
+   "p10": 5,
+   "p90": 6.5,
+   "min": 4,
+   "max": 8,
+   "mean": 5.8
+  },
+  {
+   "month": 8,
+   "median": 3,
+   "q25": 2,
+   "q75": 3,
+   "p10": 2,
+   "p90": 3,
+   "min": 2,
+   "max": 4,
+   "mean": 2.7
+  },
+  {
+   "month": 9,
+   "median": 10,
+   "q25": 9,
+   "q75": 10,
+   "p10": 8.5,
+   "p90": 11,
+   "min": 8,
+   "max": 12,
+   "mean": 9.8
+  },
+  {
+   "month": 10,
+   "median": 358,
+   "q25": 324.3,
+   "q75": 378.5,
+   "p10": 316.5,
+   "p90": 444,
+   "min": 299,
+   "max": 562,
+   "mean": 365.6
+  },
+  {
+   "month": 11,
+   "median": 555,
+   "q25": 517,
+   "q75": 608.5,
+   "p10": 479.5,
+   "p90": 639.5,
+   "min": 255,
+   "max": 1142,
+   "mean": 570.8
+  },
+  {
+   "month": 12,
+   "median": 67,
+   "q25": 64.3,
+   "q75": 76,
+   "p10": 58.5,
+   "p90": 88,
+   "min": 47,
+   "max": 96,
+   "mean": 70
+  }
+ ],
+ "annual": [
+  {
+   "year": 2000,
+   "harmonized": 642,
+   "raw_modis": 236,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2001,
+   "harmonized": 1561,
+   "raw_modis": 519,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2002,
+   "harmonized": 1297,
+   "raw_modis": 477,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2003,
+   "harmonized": 1325,
+   "raw_modis": 515,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2004,
+   "harmonized": 1438,
+   "raw_modis": 548,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2005,
+   "harmonized": 1333,
+   "raw_modis": 495,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2006,
+   "harmonized": 1300,
+   "raw_modis": 517,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2007,
+   "harmonized": 1385,
+   "raw_modis": 500,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2008,
+   "harmonized": 1622,
+   "raw_modis": 641,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2009,
+   "harmonized": 1514,
+   "raw_modis": 589,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2010,
+   "harmonized": 1530,
+   "raw_modis": 614,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2011,
+   "harmonized": 1480,
+   "raw_modis": 563,
+   "raw_viirs": 0
+  },
+  {
+   "year": 2012,
+   "harmonized": 1638,
+   "raw_modis": 609,
+   "raw_viirs": 1638
+  },
+  {
+   "year": 2013,
+   "harmonized": 1495,
+   "raw_modis": 578,
+   "raw_viirs": 1495
+  },
+  {
+   "year": 2014,
+   "harmonized": 1383,
+   "raw_modis": 539,
+   "raw_viirs": 1383
+  },
+  {
+   "year": 2015,
+   "harmonized": 1624,
+   "raw_modis": 597,
+   "raw_viirs": 1624
+  },
+  {
+   "year": 2016,
+   "harmonized": 2078,
+   "raw_modis": 819,
+   "raw_viirs": 2078
+  },
+  {
+   "year": 2017,
+   "harmonized": 1418,
+   "raw_modis": 526,
+   "raw_viirs": 1418
+  },
+  {
+   "year": 2018,
+   "harmonized": 1469,
+   "raw_modis": 544,
+   "raw_viirs": 1469
+  },
+  {
+   "year": 2019,
+   "harmonized": 1376,
+   "raw_modis": 537,
+   "raw_viirs": 1376
+  },
+  {
+   "year": 2020,
+   "harmonized": 1373,
+   "raw_modis": 543,
+   "raw_viirs": 1373
+  },
+  {
+   "year": 2021,
+   "harmonized": 1418,
+   "raw_modis": 551,
+   "raw_viirs": 1418
+  },
+  {
+   "year": 2022,
+   "harmonized": 1375,
+   "raw_modis": 524,
+   "raw_viirs": 1375
+  },
+  {
+   "year": 2023,
+   "harmonized": 1175,
+   "raw_modis": 468,
+   "raw_viirs": 1175
+  },
+  {
+   "year": 2024,
+   "harmonized": 1551,
+   "raw_modis": 590,
+   "raw_viirs": 1551
+  },
+  {
+   "year": 2025,
+   "harmonized": 1414,
+   "raw_modis": 561,
+   "raw_viirs": 1414
+  },
+  {
+   "year": 2026,
+   "harmonized": 997,
+   "raw_modis": 374,
+   "raw_viirs": 986
+  }
+ ]
+}
