@@ -98,6 +98,25 @@ def fill_missing_months(nat: pd.DataFrame, kind: str) -> pd.DataFrame:
     return res[res.k.notna()].drop_duplicates(["block_id", "month", "pass_"], keep="first")
 
 
+def fit_aqua_to_snpp(df: pd.DataFrame) -> pd.DataFrame:
+    """National + per-block (shrunk) Aqua->S-NPP factors from monthly_counts(by_block=True).
+    Columns: block_id, month, pass_, k, k_lo, k_hi, n_modis, n_viirs, kind."""
+    nat = fill_missing_months(national(df, "aqua_to_snpp"), "aqua_to_snpp")
+    knat = {(r.month, r.pass_): r.k for r in nat.itertuples()}
+    rows = []
+    for (blk, month, pas), g in df.groupby(["block_id", "month", "pass"]):
+        gy = g.groupby("year")[["v", "m"]].sum().reset_index()
+        V, M = gy["v"].sum(), gy["m"].sum()
+        kp = knat.get((month, pas))
+        if kp is None or np.isnan(kp):
+            continue
+        k = (V + ALPHA * kp * M0) / (M + ALPHA * M0)
+        lo, hi = boot_interval(gy, kp)
+        rows.append(dict(block_id=blk, month=int(month), pass_=pas, k=k, k_lo=lo, k_hi=hi,
+                         n_modis=int(M), n_viirs=int(V), kind="aqua_to_snpp"))
+    return pd.concat([nat, pd.DataFrame(rows)], ignore_index=True)
+
+
 def main() -> None:
     con = duckdb.connect()
     con.execute("SET memory_limit='1500MB'")
@@ -108,24 +127,11 @@ def main() -> None:
     if df.empty:
         print("WARNING: no Aqua/S-NPP overlap months yet - aqua_to_snpp not fitted")
     else:
-        nat = fill_missing_months(national(df, "aqua_to_snpp"), "aqua_to_snpp")
-        parts.append(nat)
-        knat = {(r.month, r.pass_): r.k for r in nat.itertuples()}
-        rows = []
-        for (blk, month, pas), g in df.groupby(["block_id", "month", "pass"]):
-            gy = g.groupby("year")[["v", "m"]].sum().reset_index()
-            V, M = gy["v"].sum(), gy["m"].sum()
-            kp = knat.get((month, pas))
-            if kp is None or np.isnan(kp):
-                continue
-            k = (V + ALPHA * kp * M0) / (M + ALPHA * M0)
-            lo, hi = boot_interval(gy, kp)
-            rows.append(dict(block_id=blk, month=int(month), pass_=pas, k=k, k_lo=lo, k_hi=hi,
-                             n_modis=int(M), n_viirs=int(V), kind="aqua_to_snpp"))
-        parts.append(pd.DataFrame(rows))
+        a2s = fit_aqua_to_snpp(df)
+        parts.append(a2s)
         years = sorted(df.year.unique())
         print(f"aqua_to_snpp: overlap years {years[0]}-{years[-1]} ({len(years)}), "
-              f"{len(rows)} block-month-pass factors")
+              f"{(a2s.block_id != 'nat').sum()} block-month-pass factors")
 
     # --- Terra -> Aqua and NOAA-20 -> S-NPP, national --------------------------------
     for kind, a, b, yrs in [("terra_to_aqua", "modis_aqua", "modis_terra", range(2003, 2020)),
