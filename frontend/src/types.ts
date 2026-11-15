@@ -110,10 +110,8 @@ export interface TimeseriesResponse {
   ytd: { year: number; doy: number; cum: number }[]
 }
 
-export interface SensorCoverage {
-  start: string
-  end: string
-}
+/** Coverage is `{start, end}` in the mocks and `[start, end, n_months]` in the pipeline's meta.json. */
+export type SensorCoverage = { start: string; end: string } | [string, string, number?]
 
 export interface NationalFactor {
   kind: 'aqua_to_snpp' | 'terra_to_aqua' | 'n20_to_snpp'
@@ -122,12 +120,21 @@ export interface NationalFactor {
   k: number
   k_lo: number
   k_hi: number
+  n_modis?: number
+  n_viirs?: number
 }
 
-/** `GET /api/meta`: meta.json plus national calibration factors. */
+/**
+ * `GET /api/meta`: meta.json plus national calibration factors. The contract leaves this loose,
+ * so every field is optional and the UI reads it defensively.
+ */
 export interface MetaResponse {
-  coverage: Partial<Record<Sensor, SensorCoverage>>
-  build_time: string
-  method_version: string
-  national_factors: NationalFactor[]
+  coverage?: Partial<Record<Sensor, SensorCoverage>>
+  build_time?: string
+  built_utc?: string
+  method_version?: string
+  unit?: string
+  region?: string
+  products?: Record<string, string>
+  national_factors?: NationalFactor[]
 }

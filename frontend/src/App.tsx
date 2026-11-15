@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import area from '@turf/area'
-import { getCalendar, getMeta, getSummary, getTimeseries, USE_MOCKS } from './api'
+import { getCalendar, getMeta, getSummary, getTimeseries, onServerWaking, USE_MOCKS } from './api'
 import type {
   AnalysisRequest,
   Baseline,
   CalendarResponse,
+  MetaResponse,
   PolygonGeometry,
   SummaryResponse,
   TimeseriesResponse,
@@ -13,6 +14,7 @@ import MapView, { type DrawMode, type MapHandle } from './components/MapView'
 import AoiPanel from './components/AoiPanel'
 import ResultsView from './components/ResultsView'
 import type { SelectedMonth } from './components/BurningCalendar'
+import MethodsPanel from './components/MethodsPanel'
 
 export type Status = 'idle' | 'loading' | 'error' | 'ready'
 
@@ -38,7 +40,9 @@ export default function App() {
   const [error, setError] = useState<string | null>(null)
   const [results, setResults] = useState<Results | null>(null)
   const [fitKey, setFitKey] = useState(0)
-  const [build, setBuild] = useState<string | null>(null)
+  const [meta, setMeta] = useState<MetaResponse | null>(null)
+  const [methodsOpen, setMethodsOpen] = useState(false)
+  const [waking, setWaking] = useState(false)
   const [selected, setSelected] = useState<SelectedMonth | null>(null)
   const inflight = useRef<AbortController | null>(null)
 
@@ -48,12 +52,18 @@ export default function App() {
   )
 
   useEffect(() => {
+    onServerWaking(setWaking)
     const ctl = new AbortController()
     getMeta(ctl.signal)
-      .then((m) => setBuild(`${m.method_version} · built ${m.build_time.slice(0, 10)}`))
+      .then(setMeta)
       .catch(() => {})
-    return () => ctl.abort()
+    return () => {
+      ctl.abort()
+      onServerWaking(null)
+    }
   }, [])
+
+  const closeMethods = useCallback(() => setMethodsOpen(false), [])
 
   const setAoiFrom = (g: PolygonGeometry | null, label: string | null, fit: boolean) => {
     setAoi(g)
@@ -83,6 +93,7 @@ export default function App() {
     } catch (e) {
       if ((e as Error).name === 'AbortError') return
       setError((e as Error).message || 'Request failed')
+      setWaking(false)
       setStatus('error')
     }
   }
@@ -94,7 +105,12 @@ export default function App() {
           <h1>Fire Activity Calendar · India</h1>
           <div className="sub">Harmonized MODIS + VIIRS fire cell-days, 2000 to present</div>
         </div>
-        {USE_MOCKS && <span className="badge" title="VITE_USE_MOCKS=true">mock data</span>}
+        <div className="header-actions">
+          {USE_MOCKS && <span className="badge" title="VITE_USE_MOCKS=true">mock data</span>}
+          <button type="button" className="btn" onClick={() => setMethodsOpen(true)} aria-haspopup="dialog">
+            About the data
+          </button>
+        </div>
       </header>
 
       <div className="body">
@@ -133,13 +149,21 @@ export default function App() {
           <div className="charts">
             {status === 'error' && <div className="msg error" role="alert">{error}</div>}
             {status === 'idle' && (
-              <div className="placeholder">Pick an area on the left and press Analyze to see its burning calendar.</div>
+              <div className="placeholder empty-state">
+                <strong>Draw an area or pick a preset</strong>
+                <span>then press Analyze to see its burning calendar from 2000 to today.</span>
+              </div>
             )}
-            {status === 'loading' && !results && <div className="placeholder">Loading calendar…</div>}
-            {status === 'loading' && results && <div className="hint">Updating…</div>}
+            {waking && (
+              <div className="msg warn" role="status">
+                Waking up the server… The free host sleeps when idle; this can take up to a minute.
+              </div>
+            )}
+            {status === 'loading' && <Skeleton />}
             {results && status !== 'loading' && (
               <ResultsView
                 label={results.label}
+                request={results.request}
                 calendar={results.calendar}
                 summary={results.summary}
                 timeseries={results.timeseries}
@@ -153,8 +177,26 @@ export default function App() {
 
       <footer className="footer">
         <span>Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m)</span>
-        <span>{build ?? ''}</span>
+        <span>
+          {meta?.method_version && <>method {meta.method_version}</>}
+          {(meta?.build_time ?? meta?.built_utc) && <> · data built {(meta?.build_time ?? meta?.built_utc ?? '').slice(0, 10)}</>}
+        </span>
       </footer>
+      <MethodsPanel open={methodsOpen} onClose={closeMethods} meta={meta} />
+    </div>
+  )
+}
+
+function Skeleton() {
+  return (
+    <div className="results" aria-busy="true" aria-label="Loading results">
+      <div className="stats">
+        {[0, 1, 2, 3, 4].map((i) => (
+          <div key={i} className="stat skeleton" style={{ height: 78 }} />
+        ))}
+      </div>
+      <div className="card skeleton" style={{ height: 420 }} />
+      <div className="card skeleton" style={{ height: 260 }} />
     </div>
   )
 }

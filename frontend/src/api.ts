@@ -37,15 +37,58 @@ async function errorFrom(res: Response): Promise<ApiError> {
   return new ApiError(res.status, detail)
 }
 
-async function post(path: string, body: AnalysisRequest, signal?: AbortSignal): Promise<Response> {
-  const res = await fetch(`${API_URL}/api${path}`, {
+// The free Render API sleeps when idle. A cold start shows up as a network error or a 502/503/504,
+// so we tell the UI and retry every 3 s, up to 3 times.
+const RETRIES = 3
+const RETRY_MS = 3000
+let wakeListener: ((waking: boolean) => void) | null = null
+export function onServerWaking(fn: ((waking: boolean) => void) | null): void {
+  wakeListener = fn
+}
+
+function abortable(ms: number, signal?: AbortSignal): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const t = setTimeout(resolve, ms)
+    signal?.addEventListener('abort', () => {
+      clearTimeout(t)
+      reject(new DOMException('Aborted', 'AbortError'))
+    })
+  })
+}
+
+async function request(url: string, init: RequestInit): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    let res: Response | null = null
+    try {
+      res = await fetch(url, init)
+    } catch (e) {
+      if ((e as Error).name === 'AbortError' || attempt >= RETRIES) {
+        wakeListener?.(false)
+        if ((e as Error).name === 'AbortError') throw e
+        throw new ApiError(0, 'Could not reach the server. Check your connection and try again.')
+      }
+    }
+    if (res && ![502, 503, 504].includes(res.status)) {
+      wakeListener?.(false)
+      if (!res.ok) throw await errorFrom(res)
+      return res
+    }
+    if (attempt >= RETRIES) {
+      wakeListener?.(false)
+      throw res ? await errorFrom(res) : new ApiError(0, 'Server unavailable.')
+    }
+    wakeListener?.(true)
+    await abortable(RETRY_MS, init.signal ?? undefined)
+  }
+}
+
+function post(path: string, body: AnalysisRequest, signal?: AbortSignal): Promise<Response> {
+  return request(`${API_URL}/api${path}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
     signal,
   })
-  if (!res.ok) throw await errorFrom(res)
-  return res
 }
 
 export async function getCalendar(req: AnalysisRequest, signal?: AbortSignal): Promise<CalendarResponse> {
@@ -65,9 +108,7 @@ export async function getTimeseries(req: AnalysisRequest, signal?: AbortSignal):
 
 export async function getMeta(signal?: AbortSignal): Promise<MetaResponse> {
   if (USE_MOCKS) return mock(() => import('./mocks/meta.json'))
-  const res = await fetch(`${API_URL}/api/meta`, { signal })
-  if (!res.ok) throw await errorFrom(res)
-  return res.json()
+  return (await request(`${API_URL}/api/meta`, { signal })).json()
 }
 
 export function saveBlob(blob: Blob, filename: string): void {

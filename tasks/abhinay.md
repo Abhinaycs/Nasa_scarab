@@ -26,10 +26,10 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live
 - [ ] Switch from mocks to the real API (`VITE_API_URL`): client ready, waiting for the /s4 stubs
 
 ## /a4-exports-polish (21:15–22:00)
-- [ ] Download hotspots CSV, calendar CSV, PNG of each chart
-- [ ] Raw vs harmonized toggle on the annual chart (the key demo moment)
-- [ ] Methods & limitations panel (from docs/METHODS.md)
-- [ ] Loading/error states, mobile layout, accessible colours + table view
+- [x] Download hotspots CSV, calendar CSV, PNG of each chart
+- [x] Raw vs harmonized toggle on the annual chart (the key demo moment)
+- [x] Methods & limitations panel (from docs/METHODS.md)
+- [x] Loading/error states, mobile layout, accessible colours + table view
 
 ## /a5-deploy (22:00–22:45)
 - [ ] `render.yaml` blueprint: Python web service (API) + static site (frontend)

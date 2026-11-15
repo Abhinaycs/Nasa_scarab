@@ -284,3 +284,45 @@ input, select {
 .selected.empty { border-left-color: var(--border); color: var(--muted); }
 /* Let flex/grid children shrink so wide charts scroll inside .plot-scroll instead of widening the page */
 .charts > *, .results > *, .chart-grid > *, .figure, .figure > *, .plot-scroll { min-width: 0; max-width: 100%; }
+
+/* a4: header, downloads, cards */
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.downloads { display: flex; flex-wrap: wrap; gap: 6px; }
+.results-head { justify-content: space-between; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.btn.small { padding: 3px 8px; font-size: 0.78rem; }
+.callout { background: var(--warn-bg); color: var(--warn-text); padding: 6px 10px; border-radius: 6px; max-width: none; }
+.empty-state { display: flex; flex-direction: column; gap: 4px; min-height: 160px; justify-content: center; align-items: center; }
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--surface) 50%, var(--surface-2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-color: var(--border);
+}
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .skeleton { animation: none; } }
+
+/* Methods slide-over */
+.drawer-backdrop { position: fixed; inset: 0; background: rgb(0 0 0 / 0.35); z-index: 50; display: flex; justify-content: flex-end; }
+.drawer {
+  width: min(520px, 100%);
+  height: 100%;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: -4px 0 24px rgb(0 0 0 / 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: slidein 0.18s ease-out;
+}
+@keyframes slidein { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .drawer { animation: none; } }
+.drawer-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.drawer-head h2 { font-size: 1.1rem; }
+.drawer-body { padding: 4px 16px 24px; overflow-y: auto; }
+.drawer-body h3 { font-size: 0.95rem; margin: 16px 0 6px; }
+.drawer-body p, .drawer-body li { font-size: 0.86rem; }
+.drawer-body ul { padding-left: 18px; }
+table.mini { border-collapse: collapse; font-size: 0.8rem; width: 100%; margin-top: 6px; }
+table.mini th, table.mini td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
