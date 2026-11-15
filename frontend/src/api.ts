@@ -185,3 +185,39 @@ export async function getHotspots(
   }
   return { points, truncated: res.headers.get('X-Truncated') === 'true' }
 }
+
+export interface PresetResults {
+  calendar: CalendarResponse
+  summary: SummaryResponse
+  timeseries: TimeseriesResponse
+}
+
+/**
+ * Pre-computed answers for the preset areas (public/preset-data, built by
+ * scripts/build_preset_data.py), so the presets open instantly instead of waiting on the API.
+ * Only used when the request is the one the file was built for: same outline, start and
+ * baseline, and an end date in the same month. Anything else returns null and goes to the API.
+ */
+export async function getPresetResults(
+  presetId: string,
+  req: AnalysisRequest,
+  signal?: AbortSignal,
+): Promise<PresetResults | null> {
+  if (USE_MOCKS) return null
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}preset-data/${presetId}.json`, { signal })
+    if (!res.ok) return null
+    const file = (await res.json()) as PresetResults & { request: AnalysisRequest }
+    const r = file.request
+    const same =
+      JSON.stringify(r.geometry) === JSON.stringify(req.geometry) &&
+      r.start === req.start &&
+      r.baseline === req.baseline &&
+      r.end.slice(0, 7) === req.end.slice(0, 7) &&
+      r.end <= req.end
+    return same ? file : null
+  } catch (e) {
+    if ((e as Error).name === 'AbortError') throw e
+    return null
+  }
+}

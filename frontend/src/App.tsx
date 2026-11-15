@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import area from '@turf/area'
-import { getCalendar, getHotspots, getMeta, getSummary, getTimeseries, onServerWaking, USE_MOCKS } from './api'
+import { getCalendar, getHotspots, getMeta, getPresetResults, getSummary, getTimeseries, onServerWaking, USE_MOCKS } from './api'
+import { PRESETS } from './presets'
 import type {
   AnalysisRequest,
   Baseline,
@@ -128,11 +129,16 @@ export default function App() {
     setError(null)
     setFitKey((k) => k + 1)
     try {
-      const [calendar, summary, timeseries] = await Promise.all([
-        getCalendar(request, ctl.signal),
-        getSummary(request, ctl.signal),
-        getTimeseries(request, ctl.signal),
-      ])
+      // Presets come from a pre-computed file when it matches the request; everything else asks the API.
+      const preset = PRESETS.find((p) => JSON.stringify(p.geometry) === JSON.stringify(aoi))
+      const cached = preset ? await getPresetResults(preset.id, request, ctl.signal) : null
+      const [calendar, summary, timeseries] = cached
+        ? [cached.calendar, cached.summary, cached.timeseries]
+        : await Promise.all([
+            getCalendar(request, ctl.signal),
+            getSummary(request, ctl.signal),
+            getTimeseries(request, ctl.signal),
+          ])
       if (ctl.signal.aborted) return
       setResults({ calendar, summary, timeseries, request, label: aoiLabel ?? 'Drawn area' })
       setSelected(null)

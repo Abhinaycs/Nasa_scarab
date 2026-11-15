@@ -11,8 +11,9 @@ import json
 import os
 import sys
 import threading
+from collections import OrderedDict
 from datetime import date
-from functools import lru_cache
+from functools import lru_cache, wraps
 from pathlib import Path
 from typing import Literal
 
@@ -194,6 +195,30 @@ def series(req: AnalysisRequest) -> tuple[Aoi, pd.DataFrame, pd.DataFrame, list[
     return aoi, full, in_range(full, req.start, req.end), years
 
 
+# ------------------------------------------------------------------ cache ----
+_resp_cache: "OrderedDict[str, object]" = OrderedDict()
+_resp_lock = threading.Lock()
+
+
+def cached_response(fn):
+    """Memoises a JSON route on its request (same area + dates -> same answer). The data is static
+    between deploys, so repeat clicks and the presets come back in milliseconds."""
+    @wraps(fn)
+    def wrapper(req: AnalysisRequest):
+        key = fn.__name__ + req.model_dump_json()
+        with _resp_lock:
+            if key in _resp_cache:
+                _resp_cache.move_to_end(key)
+                return _resp_cache[key]
+        out = fn(req)
+        with _resp_lock:
+            _resp_cache[key] = out
+            while len(_resp_cache) > 512:
+                _resp_cache.popitem(last=False)
+        return out
+    return wrapper
+
+
 # ------------------------------------------------------------------ routes ----
 @app.get("/api/health")
 def health():
@@ -206,6 +231,7 @@ def meta():
 
 
 @app.post("/api/calendar")
+@cached_response
 def calendar(req: AnalysisRequest):
     aoi, full, m, years = series(req)
     clim = climatology(full, years)
@@ -223,10 +249,14 @@ def calendar(req: AnalysisRequest):
 
 def add_anomalies_for(full: pd.DataFrame, m: pd.DataFrame, years: list[int]) -> list[dict]:
     """Anomalies for the months in range, against the full-record baseline."""
+    # One numpy array per calendar month, filtered once (was a pandas filter per row: slow on 0.1 CPU).
+    b = full[full.year.isin(years)]
+    by_month = {mth: (g.year.to_numpy(), g.value.to_numpy(float)) for mth, g in b.groupby("month")}
+    empty = (np.array([], int), np.array([], float))
     out = []
     for r in to_records(m):
-        base = full[(full.month == r["month"]) & full.year.isin(years) & (full.year != r["year"])].value
-        r["anomaly"] = anomaly(r["value"], base.to_numpy(float))
+        yrs, vals = by_month.get(r["month"], empty)
+        r["anomaly"] = anomaly(r["value"], vals[yrs != r["year"]])
         out.append(r)
     return out
 
@@ -250,6 +280,7 @@ def fire_season(clim: pd.DataFrame) -> dict:
 
 
 @app.post("/api/summary")
+@cached_response
 def summary(req: AnalysisRequest):
     aoi, full, m, years = series(req)
     clim = climatology(full, years)
@@ -274,6 +305,7 @@ def summary(req: AnalysisRequest):
 
 
 @app.post("/api/timeseries")
+@cached_response
 def timeseries(req: AnalysisRequest):
     if req.start > req.end:
         raise HTTPException(422, "start must be before end")
