@@ -1,0 +1,11 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+duckdb>=1.1
+h3>=4
+shapely>=2
+pyproj>=3.6
+numpy
+pandas
+pyarrow
+httpx
+pytest

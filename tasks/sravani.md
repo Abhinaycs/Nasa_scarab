@@ -24,7 +24,7 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 - [ ] Re-run `SKIP_DOWNLOAD=1 bash pipeline/run_all.sh` and push data/serve once S-NPP/NOAA-20 files finish downloading (interim data/serve is MODIS-only)
 
 ## /s4-api (20:15–21:15)
-- [ ] **Checkpoint first:** stub endpoints returning contract-shaped data, pushed by 20:15
+- [x] **Checkpoint first:** stub endpoints returning contract-shaped data, pushed by 20:15
 - [ ] `backend/app/main.py` FastAPI app with CORS, `/api/health`, `/api/meta`
 - [ ] AOI → H3 cells (h3-py), r5 fallback, 413 when too large
 - [ ] `/api/calendar` with climatology + anomalies
