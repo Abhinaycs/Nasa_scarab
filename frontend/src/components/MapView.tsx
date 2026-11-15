@@ -126,7 +126,9 @@ export default function MapView({ ref, aoi, fitKey, onDrawn, onDrawingChange }: 
 
   useEffect(() => {
     const map = mapRef.current
-    if (map?.isStyleLoaded()) setAoiData(map, aoi)
+    // Don't gate on isStyleLoaded(): it is false while tiles stream in. If our source exists, update it;
+    // otherwise the 'style.load' handler adds it with the latest AOI.
+    if (map?.getSource('aoi')) setAoiData(map, aoi)
   }, [aoi])
 
   useEffect(() => {

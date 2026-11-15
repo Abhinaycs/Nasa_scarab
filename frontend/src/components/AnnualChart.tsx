@@ -32,6 +32,8 @@ export default function AnnualChart({ data, mode }: Props) {
   const before = data.annual.find((a) => a.year === VIIRS_START - 1)
   const after = data.annual.find((a) => a.year === VIIRS_START)
   const jump = before && after && before.raw_modis > 0 ? after.raw_viirs / before.raw_modis : null
+  // Interim data: no VIIRS counts at all after 2012 (still downloading). Say so instead of claiming a jump.
+  const viirsMissing = data.annual.filter((a) => a.year >= VIIRS_START).every((a) => !a.raw_viirs)
 
   const render = useCallback(
     (width: number) => {
@@ -125,7 +127,13 @@ export default function AnnualChart({ data, mode }: Props) {
         }
       />
       <figcaption className={mode === 'raw' ? 'callout' : undefined}>
-        {mode === 'raw' ? (
+        {mode === 'raw' && viirsMissing ? (
+          <>
+            <strong>Raw:</strong> VIIRS data for this area is not loaded yet, so only the MODIS line is shown after
+            2012. Once VIIRS is in, its bars will sit well above the MODIS line from 2012, because VIIRS sees many
+            more small fires.
+          </>
+        ) : mode === 'raw' ? (
           <>
             <strong>Raw:</strong> VIIRS sees many more small fires than MODIS, so simply joining the two sensors makes
             fire activity look like it {jump ? <>jumped about {jump.toFixed(1)}×</> : 'jumped'} in 2012. That jump is

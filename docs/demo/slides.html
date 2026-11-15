@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FireCalendar India: demo deck</title>
+<!--
+  7-slide deck. Open in a browser to present (arrow keys / scroll), or make the PDF with:
+    node docs/demo/build-slides.mjs
+  Placeholders to fill before submitting: TEAM_NAME, CHALLENGE_NAME, LIVE_URL, VALIDATION_*.
+  Screenshots come from docs/demo/screens/ (node docs/demo/screenshots.mjs <app-url>).
+-->
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #e9ecef; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif; color: #1b1f24; }
+  .slide {
+    width: 1280px; height: 720px; margin: 24px auto; background: #fff; position: relative; overflow: hidden;
+    padding: 52px 68px 60px; box-shadow: 0 4px 24px rgb(0 0 0 / .12); page-break-after: always; break-after: page;
+    display: flex; flex-direction: column;
+  }
+  @media print { html, body { background: #fff; } .slide { margin: 0; box-shadow: none; } }
+  h1 { color: #c8501e; font-size: 60px; margin: 0 0 10px; letter-spacing: -0.5px; }
+  h2 { font-size: 38px; margin: 0 0 22px; padding-bottom: 10px; border-bottom: 4px solid #c8501e; }
+  h3 { font-size: 26px; font-weight: 500; color: #3d4652; margin: 0; }
+  p, li { font-size: 23px; line-height: 1.4; }
+  ul { margin: 0; padding-left: 26px; }
+  li { margin-bottom: 8px; }
+  strong { color: #c8501e; }
+  .muted { color: #5d6673; }
+  .small { font-size: 18px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; flex: 1; min-height: 0; }
+  .cols.wide-left { grid-template-columns: 1.25fr 1fr; }
+  .cols.wide-right { grid-template-columns: 1fr 1.35fr; }
+  img { max-width: 100%; max-height: 470px; border-radius: 8px; box-shadow: 0 2px 14px rgb(0 0 0 / .14); display: block; }
+  figure { margin: 0; }
+  figcaption { font-size: 17px; color: #5d6673; margin-top: 8px; }
+  .flow { display: flex; gap: 10px; align-items: stretch; margin: 6px 0 26px; }
+  .flow .step { flex: 1; background: #fff4ec; border: 2px solid #c8501e; border-radius: 12px; padding: 14px 16px; font-size: 18px; line-height: 1.35; }
+  .flow .step b { display: block; color: #c8501e; font-size: 21px; margin-bottom: 6px; }
+  .flow .arrow { align-self: center; font-size: 30px; color: #c8501e; }
+  .stat { font-size: 64px; font-weight: 700; color: #c8501e; line-height: 1; }
+  .statlabel { font-size: 19px; color: #3d4652; margin: 4px 0 18px; }
+  .footer { position: absolute; left: 68px; right: 68px; bottom: 20px; display: flex; justify-content: space-between; font-size: 14px; color: #8a94a3; }
+  .title { justify-content: center; }
+  .title .tag { font-size: 30px; color: #3d4652; margin-bottom: 40px; }
+  .title p { font-size: 24px; margin: 6px 0; }
+  .pill { display: inline-block; background: #fff4d6; color: #6b4a00; border-radius: 999px; padding: 4px 14px; font-size: 18px; }
+</style>
+</head>
+<body>
+
+<!-- 1. Title -->
+<section class="slide title">
+  <h1>FireCalendar India</h1>
+  <div class="tag">One consistent burning calendar from 25 years of NASA satellite fire data</div>
+  <p><strong>Team:</strong> TEAM_NAME — Sravani (data &amp; API), Abhinay (app &amp; deploy)</p>
+  <p><strong>Challenge:</strong> CHALLENGE_NAME</p>
+  <p style="margin-top:34px" class="muted">Live app: LIVE_URL &nbsp;·&nbsp; Code: github.com/sravani6130/Nasa_scarab</p>
+  <div class="footer"><span>NASA Space Apps Challenge 2026</span><span>Data: NASA FIRMS</span></div>
+</section>
+
+<!-- 2. Problem -->
+<section class="slide">
+  <h2>The problem: two satellites, two different counts</h2>
+  <div class="cols">
+    <div>
+      <ul>
+        <li><strong>MODIS</strong> (2000 →) detects fires with 1 km pixels</li>
+        <li><strong>VIIRS</strong> (2012 →) has 375 m pixels and finds many more small fires</li>
+        <li>Joined naively, fire activity seems to <strong>jump in 2012</strong>: a change of instrument, not of burning</li>
+        <li>MODIS is near the end of its mission, so the record has to <strong>continue on VIIRS</strong></li>
+      </ul>
+      <p style="margin-top:22px">So it's hard to answer a simple question:<br><em>“Is this month unusual for this place?”</em></p>
+    </div>
+    <figure>
+      <img src="screens/04-annual-raw.png" alt="Raw annual fire counts by sensor">
+      <figcaption>Raw counts per sensor for Punjab: the two instruments don't line up.</figcaption>
+    </figure>
+  </div>
+  <div class="footer"><span>FireCalendar India</span><span>2</span></div>
+</section>
+
+<!-- 3. Approach -->
+<section class="slide">
+  <h2>Our approach: count cells, then calibrate</h2>
+  <div class="flow">
+    <div class="step"><b>1 · Filter</b>NASA FIRMS detections for India. Vegetation fires only; MODIS confidence ≥ 30, VIIRS nominal/high.</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>2 · Grid</b>Each detection goes into an H3 cell (≈ 5 km²). Unit: the <b style="display:inline;font-size:inherit">fire cell-day</b>, which removes most of the pixel-size gap.</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>3 · Calibrate</b>k = VIIRS ÷ MODIS cell-days on the 2012–2025 overlap, per 2° block × month × day/night.</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>4 · Serve</b>One series in VIIRS units, anomalies vs the median, for any area you draw.</div>
+  </div>
+  <ul>
+    <li>Aqua MODIS and Suomi NPP VIIRS both pass at <strong>13:30</strong>, so their counts compare fairly</li>
+    <li>Sparse blocks are pulled toward the national ratio; every factor has a <strong>90% bootstrap interval</strong></li>
+    <li>Terra (2000–02) and NOAA-20 (2026 →) are chained in with their own ratios</li>
+  </ul>
+  <div class="footer"><span>FireCalendar India</span><span>3</span></div>
+</section>
+
+<!-- 4. Proof -->
+<section class="slide">
+  <h2>Proof: the 2012 jump disappears</h2>
+  <div class="cols wide-left">
+    <figure>
+      <img src="screens/05-annual-harmonized.png" alt="Harmonized annual fire cell-days">
+      <figcaption>Harmonized annual totals for Punjab: one consistent series across the sensor change.</figcaption>
+    </figure>
+    <div>
+      <div class="stat">VALIDATION_MAPE</div>
+      <div class="statlabel">error on monthly totals, held-out years 2019–2025 (fit on 2012–2018)</div>
+      <div class="stat">VALIDATION_K</div>
+      <div class="statlabel">more fire cell-days seen by VIIRS than MODIS (national median k)</div>
+      <div class="stat">VALIDATION_PETTITT</div>
+      <div class="statlabel">Pettitt change-point test at 2012 on harmonized annual totals</div>
+    </div>
+  </div>
+  <div class="footer"><span>FireCalendar India</span><span>4</span></div>
+</section>
+
+<!-- 5. The app -->
+<section class="slide">
+  <h2>The app</h2>
+  <div class="cols wide-right">
+    <figure>
+      <img src="screens/01-app.png" alt="App with Punjab selected" style="max-height:420px">
+      <figcaption>Draw an area, enter lat/lon + radius, or pick a preset region.</figcaption>
+    </figure>
+    <figure>
+      <img src="screens/02-calendar.png" alt="Burning calendar" style="max-height:420px">
+      <figcaption>Burning calendar: years × months with the value in every cell. One click switches to <b>anomalies</b> (orange = more fire than usual, ▲ = top 10% of years).</figcaption>
+    </figure>
+  </div>
+  <div class="footer"><span>FireCalendar India</span><span>5</span></div>
+</section>
+
+<!-- 6. Who it helps -->
+<section class="slide">
+  <h2>Who it helps</h2>
+  <div class="cols" style="grid-template-columns: 1.6fr 1fr">
+    <div>
+      <ul>
+        <li><strong>Fire &amp; disaster managers:</strong> is this month unusual? When does the season start here?</li>
+        <li><strong>Scientists:</strong> a consistent 2000–present series, with raw counts and calibration factors kept</li>
+        <li><strong>Land &amp; air-quality managers:</strong> e.g. Punjab's Oct–Nov paddy-residue burning, year by year</li>
+      </ul>
+      <p style="margin-top:20px"><strong>Open &amp; accessible:</strong> colourblind-safe colours, every number printed, table views, CSV + PNG downloads, works on a phone.</p>
+      <p><span class="pill">Try it: LIVE_URL</span></p>
+    </div>
+    <figure>
+      <img src="screens/10-phone.png" alt="App on a phone" style="max-height:500px; margin: 0 auto">
+    </figure>
+  </div>
+  <div class="footer"><span>FireCalendar India</span><span>6</span></div>
+</section>
+
+<!-- 7. NASA data & next -->
+<section class="slide">
+  <h2>NASA data &amp; what's next</h2>
+  <div class="cols">
+    <div>
+      <p style="margin-top:0"><strong>NASA FIRMS</strong> active fires</p>
+      <ul>
+        <li>MODIS C6.1, Terra + Aqua (MCD14ML), 2000–2025</li>
+        <li>VIIRS 375 m, Suomi NPP (VNP14IMG), 2012–2025</li>
+        <li>VIIRS 375 m, NOAA-20 (VJ114IMG), 2024 →</li>
+        <li>FIRMS API for near-real-time 2026</li>
+      </ul>
+      <p class="small muted" style="margin-top:24px">Stack: Python · DuckDB + H3 · FastAPI · React · MapLibre · Observable Plot · Render</p>
+    </div>
+    <div>
+      <p style="margin-top:0"><strong>Next</strong></p>
+      <ul>
+        <li>Global coverage (same method, per-region factors)</li>
+        <li>Nightly refresh from the FIRMS API</li>
+        <li>Alerts when a saved area turns “unusually high”</li>
+        <li>Footprint-level calibration with scan-angle correction</li>
+      </ul>
+      <p class="small muted" style="margin-top:24px">AI assistance: Claude Code helped write code and documentation; the team reviewed, ran and tested everything.</p>
+    </div>
+  </div>
+  <div class="footer"><span>FireCalendar India</span><span>7</span></div>
+</section>
+
+</body>
+</html>
