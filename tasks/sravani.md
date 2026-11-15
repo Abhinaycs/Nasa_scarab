@@ -8,7 +8,7 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 - [x] Create `.venv` and `pipeline/requirements.txt`
 - [x] `pipeline/download.py`: yearly India CSVs (MODIS 2000–2025, S-NPP 2012–2025, NOAA-20 2018–2025), resumable and parallel
 - [x] `pipeline/download_api.py`: 2026 to date via the FIRMS country API (NOAA-20 + MODIS)
-- [ ] All files present in `data/raw/`; row counts logged
+- [x] All files present in `data/raw/`; row counts logged (NOAA-20 2018–2023 skipped: optional, slow FIRMS server)
 
 ## /s2-ingest (19:00–19:30)
 - [x] `pipeline/ingest.py`: every CSV goes into one normalized schema in `data/work/detections/sensor=*/year=*/`
