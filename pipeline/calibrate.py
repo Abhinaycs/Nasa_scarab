@@ -163,12 +163,13 @@ def main() -> None:
                     cells.append(f"{'-':24s}")
                 else:
                     r = r.iloc[0]
-                    flag = " !" if kind != "terra_to_aqua" and not 0.5 <= r.k <= 15 else ""
+                    flag = " !" if kind != "terra_to_aqua" and pas == "D" and not 0.5 <= r.k <= 15 else ""
                     cells.append(f"{r.k:5.2f} [{r.k_lo:5.2f},{r.k_hi:5.2f}]{flag:3s}".ljust(24))
             print(f"  {mth:>5d}   " + "  ".join(cells))
-    # Terra->Aqua night factors are legitimately < 0.5 (22:30 vs 01:30 overpass); only
-    # MODIS->VIIRS and NOAA-20->S-NPP factors are expected in 0.5-15.
-    bad = cal[(cal.kind != "terra_to_aqua") & ((cal.k < 0.5) | (cal.k > 15))]
+    # Only daytime MODIS->VIIRS / NOAA-20->S-NPP factors are expected in 0.5-15. Night
+    # Aqua->S-NPP factors are legitimately large (VIIRS 375 m sees far more small night fires,
+    # Schroeder et al. 2014), and Terra->Aqua night factors < 0.5 (22:30 vs 01:30 overpass).
+    bad = cal[(cal.kind != "terra_to_aqua") & (cal["pass"] == "D") & ((cal.k < 0.5) | (cal.k > 15))]
     if len(bad):
         print(f"\nFLAG: {len(bad)} factors outside 0.5-15:\n{bad.head(10).to_string()}")
     print(f"\nwrote {OUT} ({len(cal)} rows)")

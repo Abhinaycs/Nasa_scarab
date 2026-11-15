@@ -21,7 +21,7 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 - [x] Terra→Aqua and NOAA-20→S-NPP factors
 - [x] `pipeline/export_serve.py`: `data/serve/` (cell_daily, calibration, hotspots per year, meta.json), every file < 50 MB
 - [x] `pipeline/run_all.sh` runs everything end to end
-- [ ] Re-run `SKIP_DOWNLOAD=1 bash pipeline/run_all.sh` and push data/serve once S-NPP/NOAA-20 files finish downloading (interim data/serve is MODIS-only)
+- [x] Re-run `SKIP_DOWNLOAD=1 bash pipeline/run_all.sh` and push data/serve once S-NPP/NOAA-20 files finish downloading (interim data/serve is MODIS-only)
 
 ## /s4-api (20:15–21:15)
 - [x] **Checkpoint first:** stub endpoints returning contract-shaped data, pushed by 20:15
@@ -32,9 +32,9 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 - [x] `backend/tests/test_api.py` passes; `backend/requirements.txt`
 
 ## /s5-validate-methods (21:15–22:00)
-- [ ] `pipeline/validate.py`: hold-out MAPE, Pettitt test, raw vs harmonized annual plot → `docs/figures/`
-- [ ] `docs/METHODS.md`: method, validation numbers, limitations, references
-- [ ] Submission text drafted in `docs/SUBMISSION.md` (summary, NASA data, SI use)
+- [x] `pipeline/validate.py`: hold-out MAPE, Pettitt test, raw vs harmonized annual plot → `docs/figures/`
+- [x] `docs/METHODS.md`: method, validation numbers, limitations, references
+- [x] Submission text drafted in `docs/SUBMISSION.md` (summary, NASA data, SI use)
 
 ## Stretch
 - [ ] `.github/workflows/refresh.yml`: nightly NRT pull (MAP_KEY as a repo secret)

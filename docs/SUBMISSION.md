@@ -10,7 +10,7 @@ Replace `LIVE_URL` and `DEMO_URL` before submitting. All text is in English, as 
 ## High-Level Project Summary
 FireCalendar turns 25 years of NASA satellite fire detections into one consistent burning activity calendar for any area in India.
 
-MODIS (2000 onward) and VIIRS (2012 onward) see fires differently: VIIRS has finer pixels and detects about VALIDATION_K times more fire cell-days. Joining their records naively creates a false jump in 2012. We count fire *cell-days* on an equal-area H3 grid and scale MODIS to VIIRS units with factors fitted region by region, month by month and for day and night passes separately, over 14 years of overlap. The result is a series where the sensor of origin no longer matters.
+MODIS (2000 onward) and VIIRS (2012 onward) see fires differently: VIIRS has finer pixels and detects about 6 times more fire cell-days. Joining their records naively creates a false jump in 2012. We count fire *cell-days* on an equal-area H3 grid and scale MODIS to VIIRS units with factors fitted region by region, month by month and for day and night passes separately, over 14 years of overlap. The result is a series where the sensor of origin no longer matters.
 
 In the web app, a user draws an area or enters coordinates. They get a month-by-year calendar, anomalies against the historical median ("unusually high" or "unusually low"), the typical fire season, year-to-date comparisons and CSV downloads.
 
@@ -43,7 +43,9 @@ DEMO_URL
    - Blocks with few fires are pulled toward the national factor, and a bootstrap over years gives 90% intervals.
    - Terra (2000–2002) is linked through a Terra/Aqua ratio, and NOAA-20 carries the series past the end of S-NPP.
 5. **Validation:**
-   - VALIDATION_SUMMARY
+   - Fitted on 2012–2018 and tested on 2019–2025, the all-India monthly totals are predicted within 16.7% on average, with -1.2% bias. A single constant gives 29.1%.
+   - Regional factors cut the bias of a single constant sharply: Northeast +6.7% vs +110.5%, Punjab +15.6% vs +58.5%.
+   - The false 2012 jump (×4.6 in the naive splice) is reduced to ×1.08.
 6. **Serving:** a FastAPI service queries compact Parquet files with DuckDB and responds in well under a second. The React frontend uses MapLibre and Observable Plot.
 
 **Benefits**

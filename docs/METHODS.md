@@ -11,7 +11,7 @@ All data is the NASA FIRMS active-fire record for India ([FIRMS](https://www.ear
 | Terra MODIS | MCD14ML, Collection 6.1 (FIRMS version strings 6.2 / 6.03 / 61.03) | 1 km | 10:30 / 22:30 | Nov 2000 – Jun 2002 |
 | Aqua MODIS | MCD14ML, Collection 6.1 | 1 km | 13:30 / 01:30 | Jul 2002 – Dec 2011 (+ calibration to 2025) |
 | Suomi NPP VIIRS | VNP14IMG, 375 m, version 2 | 375 m | 13:30 / 01:30 | 2012 – 2025 (**reference unit**) |
-| NOAA-20 VIIRS | VJ114IMG, 375 m, version 2 | 375 m | 13:30 / 01:30 | 2026 (near-real-time) |
+| NOAA-20 VIIRS | VJ114IMG, 375 m, version 2 | 375 m | 13:30 / 01:30 | 2026 (near-real-time); factor fitted on 2024–2025 |
 
 Suomi NPP stopped delivering new FIRMS data on 2 Nov 2026, and MODIS is nearing the end of its mission. For that reason the series is expressed in VIIRS units, and NOAA-20 carries it forward.
 
@@ -52,7 +52,27 @@ Each month uses the best sensor that observed it: S-NPP, then NOAA-20, then Aqua
 ## 5. Validation
 
 <!-- numbers from docs/figures/validation.json (pipeline/validate.py) -->
-VALIDATION_PLACEHOLDER
+**Hold-out test.** Factors fitted on 2012–2018 only were used to predict S-NPP monthly cell-days for 2019–2025 from Aqua alone. Months with fewer than 20 S-NPP cell-days are left out of the MAPE. The comparison is one national constant (k = 6.277).
+
+| Region | Months | MAPE | Bias (total) | MAPE, one constant k | Bias, one constant k |
+|---|---|---|---|---|---|
+| India | 84 | 16.7% | -1.2% | 29.1% | -2.4% |
+| Punjab | 77 | 41.6% | +15.6% | 49.3% | +58.5% |
+| Central India | 82 | 36.6% | -8.1% | 35.5% | -27.7% |
+| Northeast | 74 | 44.5% | +6.7% | 60.9% | +110.5% |
+
+For India as a whole, the predicted monthly totals are within 16.7% on average, with almost no bias (-1.2%).
+
+For single regions, individual months are noisy (MAPE 37–45%): fires there are clustered and weather-driven, and the two sensors see different parts of each event. Over many months, however, the regional factors remove most of the bias that a single constant leaves, for example **Northeast +6.7% vs +110.5%** and **Punjab +15.6% vs +58.5%**. That is the property a long-term calendar and anomaly baseline needs.
+
+**No step at 2012.** Annual totals for India:
+- **Naive splice** (raw MODIS to 2011, raw VIIRS after): it jumps by a factor of **4.6** (2012–13 against 2010–11). The Pettitt test puts its change point exactly at 2011/2012 (p = 0.0003).
+- **Harmonized series:** the ratio is **1.08**, and the strongest change point moves to 2008/2009 (p = 0.0022). This reflects a real rise in fire activity during the late 2000s, not the sensor switch.
+- **Caveat:** Pettitt cannot separate a trend from a step, so the p-value at the 2011/2012 split is still 0.0139 for the harmonized series. The step ratio is the more direct measure.
+
+**Factors.** Daytime Aqua → S-NPP factors are 4–12, the same order as the raw detection ratio. Night factors are 23–133: Aqua MODIS detects very few night fires, while the 375 m VIIRS channel picks up many small, cool night-time fires ([Schroeder et al. 2014](https://doi.org/10.1016/j.rse.2013.12.008)). Because pre-2012 night counts are small, they add little to the totals, but they are the least certain part of each month. NOAA-20 → S-NPP factors are 0.63–1.02 (fitted 2024–2025).
+
+**Known weakness.** The scatter of monthly Aqua against S-NPP is not perfectly proportional: low-fire months have a higher VIIRS/MODIS ratio. A log-log (Deming) fit, as planned in the research doc, would reduce the regional month-level error.
 
 Figures:
 - `docs/figures/annual_raw_vs_harmonized.png`
