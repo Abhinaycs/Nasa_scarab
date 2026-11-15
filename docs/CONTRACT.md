@@ -5,7 +5,8 @@ This is the interface between the pipeline/API (Sravani) and the frontend (Abhin
 ## Served files (`data/serve/`, committed, each under 50 MB)
 | File | Grain | Columns |
 |---|---|---|
-| `cell_daily.parquet` | H3 r7 cell × date × sensor × pass | `h3_7 UBIGINT, h3_5 UBIGINT, date DATE, sensor VARCHAR, pass VARCHAR('D'/'N'), n_det INT, frp_sum DOUBLE, frp_max DOUBLE, nrt BOOLEAN` |
+| `cell_daily/year=YYYY/part.parquet` | H3 r7 cell × date × sensor × pass | `h3_7 UBIGINT, h3_5 UBIGINT, date DATE, sensor VARCHAR, pass VARCHAR('D'/'N'), n_det INT, frp_sum DOUBLE, frp_max DOUBLE, nrt BOOLEAN, block_id VARCHAR` |
+| `coverage.json` | sensor → list of `YYYY-MM` months it observed | decides each month's reference sensor (see `pipeline/harmonize.py`) |
 | `calibration.parquet` | 2° block × month × pass | `block_id VARCHAR, month INT, pass VARCHAR, k DOUBLE, k_lo DOUBLE, k_hi DOUBLE, n_modis INT, n_viirs INT, kind VARCHAR('aqua_to_snpp'/'terra_to_aqua'/'n20_to_snpp')` |
 | `hotspots/year=YYYY/part.parquet` | one filtered detection of a reference sensor | `lat DOUBLE, lon DOUBLE, date DATE, time VARCHAR(HHMM), sensor VARCHAR, confidence VARCHAR, frp DOUBLE, pass VARCHAR, h3_7 UBIGINT` |
 | `meta.json` | n/a | coverage per sensor, build time, method version |

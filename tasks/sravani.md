@@ -16,11 +16,12 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Method: [docs/PLAN.md](../d
 - [x] H3 r7 + r5 columns added (DuckDB h3 extension)
 
 ## /s3-harmonize (19:30–20:15)
-- [ ] `pipeline/grid.py`: `cell_daily.parquet` (fire cell-days)
-- [ ] `pipeline/calibrate.py`: k per 2° block × month × pass, with shrinkage + bootstrap, saved to `calibration.parquet`
-- [ ] Terra→Aqua and NOAA-20→S-NPP factors
-- [ ] `pipeline/export_serve.py`: `data/serve/` (cell_daily, calibration, hotspots per year, meta.json), every file < 50 MB
-- [ ] `pipeline/run_all.sh` runs everything end to end
+- [x] `pipeline/grid.py`: `cell_daily.parquet` (fire cell-days)
+- [x] `pipeline/calibrate.py`: k per 2° block × month × pass, with shrinkage + bootstrap, saved to `calibration.parquet`
+- [x] Terra→Aqua and NOAA-20→S-NPP factors
+- [x] `pipeline/export_serve.py`: `data/serve/` (cell_daily, calibration, hotspots per year, meta.json), every file < 50 MB
+- [x] `pipeline/run_all.sh` runs everything end to end
+- [ ] Re-run `SKIP_DOWNLOAD=1 bash pipeline/run_all.sh` and push data/serve once S-NPP/NOAA-20 files finish downloading (interim data/serve is MODIS-only)
 
 ## /s4-api (20:15–21:15)
 - [ ] **Checkpoint first:** stub endpoints returning contract-shaped data, pushed by 20:15
