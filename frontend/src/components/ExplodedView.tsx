@@ -60,7 +60,7 @@ const BLOCKS = [5.8, 6.4, 7.1, 6.0, 6.35, 6.9, 5.5, 6.2, 6.6]
 const CAL = (() => {
   const r = rng(3)
   const season = [0.15, 0.1, 0.25, 0.55, 0.5, 0.15, 0.05, 0.05, 0.15, 0.75, 1, 0.35]
-  return Array.from({ length: 8 }, (_, y) => season.map((s) => Math.min(1, s * (0.6 + r() * 0.7))))
+  return Array.from({ length: 8 }, () => season.map((s) => Math.min(1, s * (0.6 + r() * 0.7))))
 })()
 const fireRamp = (v: number) => {
   // paper -> amber -> deep red, readable on dark
