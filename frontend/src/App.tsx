@@ -18,6 +18,7 @@ import ResultsView from './components/ResultsView'
 import type { SelectedMonth } from './components/BurningCalendar'
 import MethodsPanel from './components/MethodsPanel'
 import ExplodedView from './components/ExplodedView'
+import Landing from './components/Landing'
 
 export type Status = 'idle' | 'loading' | 'error' | 'ready'
 
@@ -70,6 +71,19 @@ export default function App() {
   }, [])
 
   const closeMethods = useCallback(() => setMethodsOpen(false), [])
+
+  // Start page first; "#app" in the address opens the tool directly (and makes Back return to the start page).
+  const [started, setStarted] = useState(() => window.location.hash === '#app')
+  useEffect(() => {
+    const onHash = () => setStarted(window.location.hash === '#app')
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+  const openApp = useCallback(() => {
+    window.location.hash = 'app'
+    setStarted(true)
+    window.scrollTo(0, 0)
+  }, [])
 
   // Selected calendar month → load that month's detections and show them on the map.
   useEffect(() => {
@@ -152,10 +166,19 @@ export default function App() {
     }
   }
 
+  if (!started) {
+    return (
+      <>
+        <Landing onStart={openApp}onAbout={() => setMethodsOpen(true)} />
+        <MethodsPanel open={methodsOpen} onClose={closeMethods} meta={meta} />
+      </>
+    )
+  }
+
   return (
     <div className="app">
       <header className="header">
-        <div className="brand">
+        <a className="brand" href="#" title="Back to the start page">
           <span className="brand-mark" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
               <rect x="1" y="1" width="4" height="4" rx="1" opacity=".55" />
@@ -175,7 +198,7 @@ export default function App() {
             </h1>
             <div className="sub">Harmonized MODIS + VIIRS fire cell-days, 2000 to present</div>
           </div>
-        </div>
+        </a>
         <div className="header-actions">
           {USE_MOCKS && <span className="badge" title="VITE_USE_MOCKS=true">mock data</span>}
           <button type="button" className="btn" onClick={() => setMethodsOpen(true)} aria-haspopup="dialog">
