@@ -140,3 +140,48 @@ export async function downloadHotspotsCsv(req: AnalysisRequest): Promise<{ trunc
   saveBlob(await res.blob(), match?.[1] ?? filename)
   return { truncated: res.headers.get('X-Truncated') === 'true' }
 }
+
+export interface HotspotPoint {
+  lat: number
+  lon: number
+  date: string
+  sensor: string
+  frp: number
+  daynight: string
+}
+
+/** Fetches the hotspots of one period (used to put a selected month's fires on the map). */
+export async function getHotspots(
+  req: AnalysisRequest,
+  signal?: AbortSignal,
+): Promise<{ points: HotspotPoint[]; truncated: boolean }> {
+  if (USE_MOCKS) {
+    // Scatter fake points inside the AOI's bounding box so the map layer can be tried offline.
+    await delay(300)
+    const ring = req.geometry.type === 'Polygon' ? req.geometry.coordinates[0] : req.geometry.coordinates[0][0]
+    const xs = ring.map((p) => p[0]), ys = ring.map((p) => p[1])
+    const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)]
+    const points = Array.from({ length: 600 }, (_, i) => ({
+      lat: y0 + Math.random() * (y1 - y0),
+      lon: x0 + Math.random() * (x1 - x0),
+      date: req.start,
+      sensor: i % 3 ? 'viirs_snpp' : 'modis_aqua',
+      frp: Math.random() * 40,
+      daynight: i % 4 ? 'D' : 'N',
+    }))
+    return { points, truncated: false }
+  }
+  const res = await post('/hotspots.csv', req, signal)
+  const text = await res.text()
+  const lines = text.split('\n')
+  const head = lines[0].split(',')
+  const col = (name: string) => head.indexOf(name)
+  const [iLat, iLon, iDate, iSensor, iFrp, iDn] = ['latitude', 'longitude', 'acq_date', 'sensor', 'frp', 'daynight'].map(col)
+  const points: HotspotPoint[] = []
+  for (let i = 1; i < lines.length; i++) {
+    const f = lines[i].split(',')
+    if (f.length < head.length) continue
+    points.push({ lat: +f[iLat], lon: +f[iLon], date: f[iDate], sensor: f[iSensor], frp: +f[iFrp], daynight: f[iDn] })
+  }
+  return { points, truncated: res.headers.get('X-Truncated') === 'true' }
+}

@@ -326,3 +326,34 @@ input, select {
 .drawer-body ul { padding-left: 18px; }
 table.mini { border-collapse: collapse; font-size: 0.8rem; width: 100%; margin-top: 6px; }
 table.mini th, table.mini td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+
+/* Fires on the map */
+.map-overlay {
+  position: absolute; left: 10px; top: 10px; z-index: 2; max-width: calc(100% - 70px);
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px;
+  box-shadow: var(--shadow); padding: 6px 10px; font-size: 0.82rem; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+}
+.map-legend { display: inline-flex; gap: 10px; color: var(--muted); }
+.map-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 3px; vertical-align: middle; }
+.show-map { margin-left: 8px; }
+
+/* Plain-language headline */
+.headline { border-radius: var(--radius); padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--muted); box-shadow: var(--shadow); }
+.headline.high { border-left-color: #e8590c; }
+.headline.low { border-left-color: #6741d9; }
+.headline-main { font-size: 1.15rem; line-height: 1.35; }
+.headline-sub { margin-top: 4px; color: var(--muted); font-size: 0.88rem; }
+.tag { display: inline-block; margin-left: 8px; font-size: 0.72rem; padding: 1px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted); vertical-align: middle; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+.tag.high { background: #fff0e6; color: #b3410a; }
+.tag.low { background: #efe9ff; color: #5132b8; }
+:root[data-theme='dark'] .tag.high, :root[data-theme='dark'] .tag.low { background: var(--surface-2); }
+
+/* How it works */
+.how { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; }
+.how h2 { font-size: 1.3rem; margin-bottom: 6px; }
+.how-sub { color: var(--muted); margin: 0 0 16px; max-width: 78ch; }
+.how-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.how-steps li { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 8px; background: var(--surface-2); }
+.how-steps li span:last-child { color: var(--muted); font-size: 0.88rem; }
+.how-n { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-text); font-weight: 700; font-size: 0.85rem; margin-bottom: 2px; }
+.how-cta { margin: 14px 0 0; font-size: 0.9rem; }

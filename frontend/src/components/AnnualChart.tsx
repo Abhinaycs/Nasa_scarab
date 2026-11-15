@@ -35,6 +35,25 @@ export default function AnnualChart({ data, mode }: Props) {
   // Interim data: no VIIRS counts at all after 2012 (still downloading). Say so instead of claiming a jump.
   const viirsMissing = data.annual.filter((a) => a.year >= VIIRS_START).every((a) => !a.raw_viirs)
 
+  // 90% interval per year from each scaled month's k interval: value × k_lo/k … value × k_hi/k.
+  // Months measured directly by VIIRS carry no calibration uncertainty.
+  const bands = useMemo(() => {
+    const m = new Map<number, { lo: number; hi: number; scaled: boolean }>()
+    for (const c of data.cells) {
+      const b = m.get(c.year) ?? { lo: 0, hi: 0, scaled: false }
+      if (c.k && c.k_lo !== null && c.k_hi !== null && c.k > 0) {
+        b.lo += (c.value * c.k_lo) / c.k
+        b.hi += (c.value * c.k_hi) / c.k
+        b.scaled = true
+      } else {
+        b.lo += c.value
+        b.hi += c.value
+      }
+      m.set(c.year, b)
+    }
+    return [...m.entries()].filter(([, b]) => b.scaled && b.hi > b.lo).map(([year, b]) => ({ year, ...b }))
+  }, [data])
+
   const render = useCallback(
     (width: number) => {
       const partial = (y: number) => partialYears.has(y)
@@ -66,6 +85,10 @@ export default function AnnualChart({ data, mode }: Props) {
               title: (a) => `${a.year}${partial(a.year) ? ' (part year)' : ''}\nHarmonized: ${fmtInt(a.harmonized)}`,
               tip: true,
             }),
+            // 90% calibration interval on the MODIS-era (scaled) years
+            Plot.ruleX(bands, { x: 'year', y1: 'lo', y2: 'hi', stroke: 'currentColor', strokeWidth: 1.5, strokeOpacity: 0.75 }),
+            Plot.tickY(bands, { x: 'year', y: 'lo', stroke: 'currentColor', strokeOpacity: 0.75, inset: 8 }),
+            Plot.tickY(bands, { x: 'year', y: 'hi', stroke: 'currentColor', strokeOpacity: 0.75, inset: 8 }),
             sensorLine,
             Plot.ruleY([0]),
           ],
@@ -107,7 +130,7 @@ export default function AnnualChart({ data, mode }: Props) {
         ],
       })
     },
-    [data, mode, current, first, partialYears],
+    [data, mode, current, first, partialYears, bands],
   )
 
   return (
@@ -144,6 +167,7 @@ export default function AnnualChart({ data, mode }: Props) {
           <>
             <strong>Harmonized:</strong> MODIS years are scaled into VIIRS units using ratios fitted where both sensors
             overlap, so the series is consistent across 2012.
+            {bands.length > 0 && <> Whiskers on the MODIS years show the 90% calibration interval.</>}
             {partialList && <> Faded bars ({partialList}) are part years with fewer than 12 months of data.</>}
           </>
         )}

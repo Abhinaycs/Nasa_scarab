@@ -30,6 +30,13 @@ interface Props {
   fitKey: number
   onDrawn: (geometry: PolygonGeometry) => void
   onDrawingChange?: (mode: DrawMode | null) => void
+  /** Fire detections to show as dots (e.g. the selected calendar month). */
+  fires?: FiresGeoJSON | null
+}
+
+export interface FiresGeoJSON {
+  type: 'FeatureCollection'
+  features: { type: 'Feature'; properties: { sensor: string; frp: number; daynight: string; date: string }; geometry: { type: 'Point'; coordinates: [number, number] } }[]
 }
 
 const emptyFC = { type: 'FeatureCollection' as const, features: [] }
@@ -43,11 +50,13 @@ function boundsOf(g: PolygonGeometry): LngLatBoundsLike {
   return [[minX, minY], [maxX, maxY]]
 }
 
-export default function MapView({ ref, aoi, fitKey, onDrawn, onDrawingChange }: Props) {
+export default function MapView({ ref, aoi, fitKey, onDrawn, onDrawingChange, fires = null }: Props) {
   const container = useRef<HTMLDivElement>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
   const drawRef = useRef<TerraDraw | null>(null)
   const aoiRef = useRef(aoi)
+  const firesRef = useRef(fires)
+  firesRef.current = fires
   const cb = useRef({ onDrawn, onDrawingChange })
   cb.current = { onDrawn, onDrawingChange }
   aoiRef.current = aoi
@@ -86,6 +95,22 @@ export default function MapView({ ref, aoi, fitKey, onDrawn, onDrawingChange }: 
       if (!map.getLayer('aoi-line'))
         map.addLayer({ id: 'aoi-line', type: 'line', source: 'aoi', paint: { 'line-color': AOI_COLOR, 'line-width': 2 } })
       setAoiData(map, aoiRef.current)
+
+      // Fire detections for the selected month: MODIS blue, VIIRS orange (same colours as the charts).
+      if (!map.getSource('fires')) map.addSource('fires', { type: 'geojson', data: firesRef.current ?? emptyFC })
+      if (!map.getLayer('fires'))
+        map.addLayer({
+          id: 'fires',
+          type: 'circle',
+          source: 'fires',
+          paint: {
+            'circle-color': ['case', ['in', 'modis', ['get', 'sensor']], '#3b5bdb', '#e8590c'],
+            'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 1.6, 7, 2.6, 10, 4.5],
+            'circle-opacity': 0.75,
+            'circle-stroke-color': '#ffffff',
+            'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 4, 0, 8, 0.5],
+          },
+        })
 
       if (!drawRef.current) {
         const draw = new TerraDraw({
@@ -130,6 +155,11 @@ export default function MapView({ ref, aoi, fitKey, onDrawn, onDrawingChange }: 
     // otherwise the 'style.load' handler adds it with the latest AOI.
     if (map?.getSource('aoi')) setAoiData(map, aoi)
   }, [aoi])
+
+  useEffect(() => {
+    const src = mapRef.current?.getSource('fires') as GeoJSONSource | undefined
+    src?.setData(fires ?? emptyFC)
+  }, [fires])
 
   useEffect(() => {
     const map = mapRef.current
