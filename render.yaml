@@ -14,8 +14,9 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
+      # Read-only public API, so any origin may call it (Render added a suffix to the site URL).
       - key: ALLOWED_ORIGINS
-        value: https://fire-calendar.onrender.com
+        value: "*"
 
   # React build served from Render's CDN. Static sites never sleep.
   - type: web
@@ -29,7 +30,7 @@ services:
       - key: NODE_VERSION
         value: 22.14.0
       - key: VITE_API_URL
-        value: https://fire-calendar-api.onrender.com
+        value: https://fire-calendar-api-x1ip.onrender.com
       - key: VITE_USE_MOCKS
         value: "false"
     routes:
