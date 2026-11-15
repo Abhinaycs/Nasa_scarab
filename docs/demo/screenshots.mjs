@@ -48,11 +48,11 @@ const waitFor = async (expr, ms = 90000) => {
   throw new Error(`timed out waiting for ${expr}`)
 }
 const viewport = async (w, h, mobile = false) =>
-  send('Emulation.setDeviceMetricsOverride', { width: w, height: h, deviceScaleFactor: 2, mobile })
+  send('Emulation.setDeviceMetricsOverride', { width: w, height: h, deviceScaleFactor: 1, mobile }) // 1x: at 2x, Plot's pointer misreads synthetic clicks
 
 /** Screenshot of one element (by CSS selector + optional heading text), or the viewport. */
 async function shot(name, selector, heading, fixedClip) {
-  let clip = fixedClip ? { ...fixedClip, scale: 1 } : undefined
+  let clip = fixedClip ? { ...fixedClip, scale: 2 } : undefined // capture at 2x for sharp slides
   if (!clip && selector) {
     const r = await js(`(() => {
       const els = [...document.querySelectorAll(${JSON.stringify(selector)})];
@@ -62,7 +62,7 @@ async function shot(name, selector, heading, fixedClip) {
       return { x: b.x + scrollX, y: b.y + scrollY, width: b.width, height: b.height };
     })()`)
     if (!r) throw new Error(`no element for ${selector} ${heading ?? ''}`)
-    clip = { ...r, scale: 1 }
+    clip = { ...r, scale: 2 }
   }
   const res = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false, ...(clip ? { clip } : {}) })
   writeFileSync(join(out, name), Buffer.from(res.result.data, 'base64'))
@@ -76,6 +76,7 @@ await viewport(1440, 3400) // tall, so element shots never need captureBeyondVie
 await send('Page.navigate', { url })
 await waitFor(`!!document.querySelector('button.preset')`)
 await sleep(2500) // let map tiles load
+await shot('11-hero.png', 'section.how') // first-load hero with the exploded view
 
 await click('button.preset', preset)
 await sleep(1500)
@@ -83,7 +84,28 @@ await click('button', 'Analyze')
 await waitFor(`!!document.querySelector('.results .stat-value')`)
 await sleep(2500)
 const FIRST_SCREEN = { x: 0, y: 0, width: 1440, height: 1000 }
-await shot('01-app.png', null, null, FIRST_SCREEN) // first screen: panel, map, summary
+await shot('00-results-top.png', null, null, FIRST_SCREEN) // panel, map, headline, summary
+
+// Click a month in the calendar (default Nov 2016) so its fires appear on the map.
+const [selYear, selMon] = (process.env.MONTH ?? '2016-Nov').split('-')
+const pos = await js(`(() => {
+  const svg = document.querySelector('.results .plot-scroll svg');
+  const ty = [...svg.querySelectorAll('g[aria-label="y-axis tick label"] text')].find(t => t.textContent === ${JSON.stringify(selYear)});
+  const tx = [...svg.querySelectorAll('g[aria-label="x-axis tick label"] text')].find(t => t.textContent === ${JSON.stringify(selMon)});
+  if (!ty || !tx) return null;
+  const a = ty.getBoundingClientRect(), b = tx.getBoundingClientRect();
+  return [b.x + b.width / 2, a.y + a.height / 2];
+})()`)
+if (pos) {
+  for (const type of ['mouseMoved', 'mousePressed', 'mouseReleased']) {
+    await send('Input.dispatchMouseEvent', type === 'mouseMoved' ? { type, x: pos[0], y: pos[1] } : { type, x: pos[0], y: pos[1], button: 'left', clickCount: 1 })
+    await sleep(400) // let Plot register the hover before the click
+  }
+  await waitFor(`!!document.querySelector('.map-overlay') && !document.querySelector('.map-overlay').innerText.startsWith('Loading')`)
+  await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 5, y: 5 }) // hide the calendar tooltip
+  await sleep(6000) // tens of thousands of points take a few seconds to draw in software GL
+}
+await shot('01-app.png', null, null, FIRST_SCREEN) // first screen with the selected month's fires on the map
 
 await shot('02-calendar.png', 'section.card', 'Burning calendar')
 await click('button.seg-btn', 'Anomalies')
@@ -120,10 +142,10 @@ await waitFor(`!!document.querySelector('.results .stat-value')`)
 await sleep(2000)
 await js(`document.querySelector('.results').scrollIntoView()`)
 await sleep(500)
-await shot('10-phone.png')
+await shot('10-phone.png', null, null, { x: 0, y: await js('scrollY'), width: 390, height: 844 })
 
 ws.close()
 chrome.kill()
 await sleep(500)
-rmSync(profile, { recursive: true, force: true })
+try { rmSync(profile, { recursive: true, force: true }) } catch {} // Chrome may still hold a file
 console.log('done →', out)
