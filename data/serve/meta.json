@@ -1,19 +1,17 @@
 {
- "built_utc": "2026-11-15T13:46:57+00:00",
+ "build_time": "2026-11-15T13:49:05Z",
  "method_version": "1.0",
  "region": "India",
  "unit": "fire cell-days (S-NPP VIIRS equivalent), H3 resolution 7",
  "coverage": {
-  "modis_terra": [
-   "2000-11",
-   "2011-12",
-   122
-  ],
-  "modis_aqua": [
-   "2002-07",
-   "2011-12",
-   102
-  ]
+  "modis_terra": {
+   "start": "2000-11-01",
+   "end": "2011-12-31"
+  },
+  "modis_aqua": {
+   "start": "2002-07-04",
+   "end": "2011-12-31"
+  }
  },
  "month_source": {
   "2000-11": "modis_terra",

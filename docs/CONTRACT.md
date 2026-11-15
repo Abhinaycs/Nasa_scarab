@@ -84,6 +84,7 @@ Columns: `latitude,longitude,acq_date,acq_time,sensor,confidence,frp,daynight,ha
 Capped at 200,000 rows; the response header `X-Truncated: true` is set when the cap is hit.
 
 ### `GET /api/meta`
+Shape (matches `frontend/src/types.ts` `MetaResponse`): `{ coverage: { <sensor>: { start, end } }, build_time, method_version, national_factors: [{ kind, block_id, month, pass, k, k_lo, k_hi, n_modis, n_viirs }], region, unit, month_source, products }`.
 This is `meta.json`, plus the national calibration factors for the methods panel.
 
 ### `GET /api/health`

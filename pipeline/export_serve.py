@@ -65,13 +65,15 @@ def main() -> None:
           ) TO '{d / 'part.parquet'}' (FORMAT parquet, COMPRESSION zstd)""")
 
     nat = calib.cal[calib.cal.block_id == "nat"].round(4).to_dict(orient="records")
+    # shape matches frontend/src/types.ts MetaResponse: coverage {sensor: {start, end}}
+    span = con.execute(f"""SELECT sensor, min(date)::VARCHAR, max(date)::VARCHAR
+                           FROM '{WORK / 'cell_daily.parquet'}' GROUP BY sensor""").fetchall()
     meta = dict(
-        built_utc=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        build_time=datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
         method_version=METHOD_VERSION,
         region="India",
         unit="fire cell-days (S-NPP VIIRS equivalent), H3 resolution 7",
-        coverage={s: [m[0], m[-1], len(m)] for s, m in
-                  ((s, sorted(v)) for s, v in calib.coverage.items()) if m},
+        coverage={s: {"start": a, "end": b} for s, a, b in span},
         month_source=calib.month_source,
         national_factors=nat,
         products={
