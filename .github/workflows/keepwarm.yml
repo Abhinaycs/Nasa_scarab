@@ -1,0 +1,28 @@
+# Keeps the free Render API awake during judging by pinging it every 10 minutes.
+# It does nothing until the repository variable API_URL is set, e.g. https://fire-calendar-api.onrender.com
+# (GitHub repo → Settings → Secrets and variables → Actions → Variables → New repository variable).
+name: keep-warm
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    if: ${{ vars.API_URL != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping /api/health
+        env:
+          API_URL: ${{ vars.API_URL }}
+        run: |
+          for i in 1 2 3; do
+            if curl -fsS --max-time 60 -o /dev/null -w "HTTP %{http_code} in %{time_total}s\n" "$API_URL/api/health"; then
+              exit 0
+            fi
+            echo "attempt $i failed, retrying in 20 s"
+            sleep 20
+          done
+          exit 1

@@ -32,9 +32,9 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live
 - [x] Loading/error states, mobile layout, accessible colours + table view
 
 ## /a5-deploy (22:00–22:45)
-- [ ] `render.yaml` blueprint: Python web service (API) + static site (frontend)
+- [x] `render.yaml` blueprint: Python web service (API) + static site (frontend)
 - [ ] Deployed; `VITE_API_URL` and `ALLOWED_ORIGINS` set
-- [ ] `.github/workflows/keepwarm.yml` pings `/api/health` every 10 minutes
+- [x] `.github/workflows/keepwarm.yml` pings `/api/health` every 10 minutes (inactive until the repo variable `API_URL` is set)
 - [ ] Live URL tested in a private window on desktop and phone; URL added to README
 
 ## /a6-demo-submission (22:45–23:30)
