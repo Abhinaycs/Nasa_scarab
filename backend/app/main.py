@@ -42,7 +42,7 @@ MONTHS = list(range(1, 13))
 
 # ---------------------------------------------------------------- startup ----
 _con = duckdb.connect()
-_con.execute(f"SET memory_limit='{os.environ.get("DUCKDB_MEMORY_LIMIT", "200MB")}'")
+_con.execute("SET memory_limit='" + os.environ.get('DUCKDB_MEMORY_LIMIT', '200MB') + "'")
 _con.execute("SET threads=2")
 _con.execute(f"""CREATE VIEW cell_daily AS SELECT * FROM read_parquet(
     '{DATA_DIR}/cell_daily/year=*/part.parquet', hive_partitioning=true)""")
