@@ -174,3 +174,62 @@ button, input, select { font: inherit; color: inherit; }
   .panel { border-right: 0; border-bottom: 1px solid var(--border); }
   .map-wrap { height: 320px; }
 }
+
+/* Map */
+.map-wrap .map { position: absolute; inset: 0; }
+.maplibregl-ctrl-attrib { font-size: 11px; }
+
+/* AOI panel */
+.tabs { display: flex; gap: 2px; background: var(--surface-2); padding: 3px; border-radius: 7px; }
+.tab {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 6px 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.tab.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); font-weight: 600; }
+.tabpanel { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
+.row { display: flex; flex-wrap: wrap; gap: 6px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+label { display: flex; flex-direction: column; gap: 3px; font-size: 0.82rem; color: var(--muted); }
+input, select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  min-width: 0;
+}
+.hint { margin: 0; font-size: 0.8rem; color: var(--muted); }
+.presets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.preset {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.preset span { font-size: 0.78rem; color: var(--muted); }
+.preset:hover { border-color: var(--muted); }
+.preset.active { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.aoi-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-size: 0.85rem;
+}
+.analyze { padding: 9px; font-weight: 600; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

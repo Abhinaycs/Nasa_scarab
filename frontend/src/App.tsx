@@ -1,35 +1,87 @@
-import { useEffect, useState } from 'react'
-import { getCalendar, getMeta, USE_MOCKS } from './api'
-import type { AnalysisRequest, CalendarResponse } from './types'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import area from '@turf/area'
+import { getCalendar, getMeta, getSummary, getTimeseries, USE_MOCKS } from './api'
+import type {
+  AnalysisRequest,
+  Baseline,
+  CalendarResponse,
+  PolygonGeometry,
+  SummaryResponse,
+  TimeseriesResponse,
+} from './types'
+import MapView, { type DrawMode, type MapHandle } from './components/MapView'
+import AoiPanel from './components/AoiPanel'
 
-// Placeholder AOI (central Punjab) until /a2 adds drawing and presets.
-const DEFAULT_REQUEST: AnalysisRequest = {
-  geometry: {
-    type: 'Polygon',
-    coordinates: [[[75.0, 30.0], [76.5, 30.0], [76.5, 31.5], [75.0, 31.5], [75.0, 30.0]]],
-  },
-  start: '2000-11-01',
-  end: new Date().toISOString().slice(0, 10),
-  baseline: 'all',
+export type Status = 'idle' | 'loading' | 'error' | 'ready'
+
+export interface Results {
+  calendar: CalendarResponse
+  summary: SummaryResponse
+  timeseries: TimeseriesResponse
+  request: AnalysisRequest
+  label: string
 }
 
+const today = () => new Date().toISOString().slice(0, 10)
+
 export default function App() {
-  const [request] = useState<AnalysisRequest>(DEFAULT_REQUEST)
-  const [calendar, setCalendar] = useState<CalendarResponse | null>(null)
+  const mapRef = useRef<MapHandle>(null)
+  const [aoi, setAoi] = useState<PolygonGeometry | null>(null)
+  const [aoiLabel, setAoiLabel] = useState<string | null>(null)
+  const [drawing, setDrawing] = useState<DrawMode | null>(null)
+  const [start, setStart] = useState('2000-11-01')
+  const [end, setEnd] = useState(today())
+  const [baseline, setBaseline] = useState<Baseline>('all')
+  const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState<string | null>(null)
+  const [results, setResults] = useState<Results | null>(null)
+  const [fitKey, setFitKey] = useState(0)
   const [build, setBuild] = useState<string | null>(null)
+  const inflight = useRef<AbortController | null>(null)
+
+  const areaKm2 = useMemo(
+    () => (aoi ? area({ type: 'Feature', properties: {}, geometry: aoi }) / 1e6 : null),
+    [aoi],
+  )
 
   useEffect(() => {
     const ctl = new AbortController()
-    setError(null)
-    getCalendar(request, ctl.signal)
-      .then(setCalendar)
-      .catch((e: Error) => e.name !== 'AbortError' && setError(e.message))
     getMeta(ctl.signal)
       .then((m) => setBuild(`${m.method_version} · built ${m.build_time.slice(0, 10)}`))
       .catch(() => {})
     return () => ctl.abort()
-  }, [request])
+  }, [])
+
+  const setAoiFrom = (g: PolygonGeometry | null, label: string | null, fit: boolean) => {
+    setAoi(g)
+    setAoiLabel(label)
+    if (fit && g) setFitKey((k) => k + 1)
+  }
+
+  const analyze = async () => {
+    if (!aoi) return
+    inflight.current?.abort()
+    const ctl = new AbortController()
+    inflight.current = ctl
+    const request: AnalysisRequest = { geometry: aoi, start, end, baseline }
+    setStatus('loading')
+    setError(null)
+    setFitKey((k) => k + 1)
+    try {
+      const [calendar, summary, timeseries] = await Promise.all([
+        getCalendar(request, ctl.signal),
+        getSummary(request, ctl.signal),
+        getTimeseries(request, ctl.signal),
+      ])
+      if (ctl.signal.aborted) return
+      setResults({ calendar, summary, timeseries, request, label: aoiLabel ?? 'Drawn area' })
+      setStatus('ready')
+    } catch (e) {
+      if ((e as Error).name === 'AbortError') return
+      setError((e as Error).message || 'Request failed')
+      setStatus('error')
+    }
+  }
 
   return (
     <div className="app">
@@ -43,37 +95,53 @@ export default function App() {
 
       <div className="body">
         <aside className="panel" aria-label="Area and dates">
-          <section>
-            <h2>Area of interest</h2>
-            <div className="placeholder">Draw, presets and lat/lon + radius come in /a2</div>
-          </section>
-          <section>
-            <h2>Dates &amp; baseline</h2>
-            <div className="placeholder">
-              {request.start} → {request.end}
-              <br />
-              baseline: {request.baseline}
-            </div>
-          </section>
+          <AoiPanel
+            aoi={aoi}
+            aoiLabel={aoiLabel}
+            areaKm2={areaKm2}
+            drawing={drawing}
+            start={start}
+            end={end}
+            baseline={baseline}
+            loading={status === 'loading'}
+            onStartDraw={(m) => mapRef.current?.startDraw(m)}
+            onCancelDraw={() => mapRef.current?.cancelDraw()}
+            onSetAoi={setAoiFrom}
+            getMapCenter={() => mapRef.current?.getCenter() ?? { lat: 22.5, lon: 78.9 }}
+            onStart={setStart}
+            onEnd={setEnd}
+            onBaseline={setBaseline}
+            onAnalyze={analyze}
+          />
         </aside>
 
         <main className="main">
           <div className="card map-wrap">
-            <div className="placeholder">Map (MapLibre) comes in /a2</div>
+            <MapView
+              ref={mapRef}
+              aoi={aoi}
+              fitKey={fitKey}
+              onDrawn={(g) => setAoiFrom(g, 'Drawn area', false)}
+              onDrawingChange={setDrawing}
+            />
           </div>
 
-          <div className="charts">
-            {error && <div className="msg error">{error}</div>}
-            <div className="card">
-              <h3>Burning calendar</h3>
-              <div className="placeholder">
-                {calendar
-                  ? `${calendar.cells.length} months loaded · ${calendar.years[0]}–${calendar.years.at(-1)} · ${calendar.aoi.area_km2.toLocaleString()} km² · ${calendar.unit}`
-                  : error
-                    ? 'No data'
-                    : 'Loading…'}
+          <div className="charts" aria-live="polite">
+            {status === 'error' && <div className="msg error" role="alert">{error}</div>}
+            {status === 'idle' && (
+              <div className="placeholder">Pick an area on the left and press Analyze to see its burning calendar.</div>
+            )}
+            {status === 'loading' && <div className="placeholder">Loading calendar…</div>}
+            {status === 'ready' && results && (
+              <div className="card">
+                <h3>{results.label}</h3>
+                <div className="placeholder">
+                  {results.calendar.cells.length} months · {results.calendar.years[0]}–{results.calendar.years.at(-1)} ·{' '}
+                  {results.calendar.aoi.area_km2.toLocaleString()} km² · peak month {results.summary.peak_month} ·{' '}
+                  {results.timeseries.weekly.length} weeks. Charts come in /a3.
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </main>
       </div>

@@ -11,11 +11,11 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live
 - [x] Layout shell: header, left panel (AOI + dates), main (map + charts)
 
 ## /a2-map-aoi (19:00–20:15)
-- [ ] MapLibre map centred on India (free OSM/OpenFreeMap style, no key)
-- [ ] Draw polygon / rectangle with Terra Draw; clear button
-- [ ] Lat/lon + radius form, turned into a circle polygon
-- [ ] Preset areas (Punjab, Haryana, Odisha, Mizoram, Madhya Pradesh as simple polygons)
-- [ ] Date range + baseline selector; area check (> 400,000 km² shows a warning)
+- [x] MapLibre map centred on India (free OSM/OpenFreeMap style, no key)
+- [x] Draw polygon / rectangle with Terra Draw; clear button
+- [x] Lat/lon + radius form, turned into a circle polygon
+- [x] Preset areas (Punjab, Haryana, Odisha, Mizoram, Madhya Pradesh as simple polygons)
+- [x] Date range + baseline selector; area check (> 400,000 km² shows a warning)
 
 ## /a3-calendar-charts (20:15–21:15)
 - [ ] Burning calendar: years down, months across, cividis/log colour, value printed in each cell, median + p90 rows
