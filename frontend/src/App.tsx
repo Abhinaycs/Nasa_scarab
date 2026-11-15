@@ -155,11 +155,26 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <div>
-          <h1>
-            Fire Activity Calendar <em>· India</em>
-          </h1>
-          <div className="sub">Harmonized MODIS + VIIRS fire cell-days, 2000 to present</div>
+        <div className="brand">
+          <span className="brand-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+              <rect x="1" y="1" width="4" height="4" rx="1" opacity=".55" />
+              <rect x="7" y="1" width="4" height="4" rx="1" opacity=".8" />
+              <rect x="13" y="1" width="4" height="4" rx="1" opacity=".4" />
+              <rect x="1" y="7" width="4" height="4" rx="1" opacity=".4" />
+              <rect x="7" y="7" width="4" height="4" rx="1" />
+              <rect x="13" y="7" width="4" height="4" rx="1" opacity=".8" />
+              <rect x="1" y="13" width="4" height="4" rx="1" opacity=".8" />
+              <rect x="7" y="13" width="4" height="4" rx="1" opacity=".4" />
+              <rect x="13" y="13" width="4" height="4" rx="1" opacity=".55" />
+            </svg>
+          </span>
+          <div className="brand-text">
+            <h1>
+              Fire Activity Calendar <em>India</em>
+            </h1>
+            <div className="sub">Harmonized MODIS + VIIRS fire cell-days, 2000 to present</div>
+          </div>
         </div>
         <div className="header-actions">
           {USE_MOCKS && <span className="badge" title="VITE_USE_MOCKS=true">mock data</span>}
