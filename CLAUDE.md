@@ -25,6 +25,7 @@ tasks/           per-person checklists, updated by the slash commands
 
 ## Rules for every session
 - Stay inside your own folders (see Layout). Shared files: docs/CONTRACT.md, CLAUDE.md, README.md.
+- **Never add `Co-Authored-By: Claude` or any AI attribution trailer to commits or PRs.** Commits are authored by the team member only.
 - Commit small and often, directly to `main`: `git pull --rebase` and then `git push` (use `/sync`).
 - After finishing a task, tick its checkbox in your `tasks/*.md` file and push, so the other person's `/status` sees it.
 - Never commit `.env`, the MAP_KEY or `data/raw/`. Keep every file in `data/serve/` under 50 MB.
