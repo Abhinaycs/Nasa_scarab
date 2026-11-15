@@ -17,6 +17,7 @@ import AoiPanel from './components/AoiPanel'
 import ResultsView from './components/ResultsView'
 import type { SelectedMonth } from './components/BurningCalendar'
 import MethodsPanel from './components/MethodsPanel'
+import ExplodedView from './components/ExplodedView'
 
 export type Status = 'idle' | 'loading' | 'error' | 'ready'
 
@@ -155,7 +156,9 @@ export default function App() {
     <div className="app">
       <header className="header">
         <div>
-          <h1>Fire Activity Calendar · India</h1>
+          <h1>
+            Fire Activity Calendar <em>· India</em>
+          </h1>
           <div className="sub">Harmonized MODIS + VIIRS fire cell-days, 2000 to present</div>
         </div>
         <div className="header-actions">
@@ -296,23 +299,33 @@ function HowItWorks() {
   ]
   return (
     <section className="how" aria-labelledby="how-h">
-      <h2 id="how-h">One consistent fire record for any area in India</h2>
-      <p className="how-sub">
-        Satellites have tracked fires since 2000, but two generations of sensors count them differently. This app joins
-        them into one burning calendar, so you can see when an area burns and whether this month is unusual.
-      </p>
-      <ol className="how-steps">
-        {steps.map((st) => (
-          <li key={st.n}>
-            <span className="how-n" aria-hidden="true">{st.n}</span>
-            <strong>{st.title}</strong>
-            <span>{st.text}</span>
-          </li>
-        ))}
-      </ol>
-      <p className="how-cta">
-        <strong>Try it:</strong> choose <em>Presets → Punjab</em> on the left and press <em>Analyze</em>.
-      </p>
+      <div className="how-text">
+        <div className="eyebrow">25 years · two satellite generations · one record</div>
+        <h2 id="how-h">
+          One consistent fire record <em>for any area in India.</em>
+        </h2>
+        <p className="how-sub">
+          Satellites have tracked fires since 2000, but two generations of sensors count them differently. This app
+          joins them into one burning calendar, so you can see when an area burns and whether this month is unusual.
+        </p>
+        <ol className="how-steps">
+          {steps.map((st) => (
+            <li key={st.n}>
+              <span className="how-n" aria-hidden="true">{st.n}</span>
+              <strong>{st.title}</strong>
+              <span>{st.text}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="how-cta">
+          <strong>Try it:</strong> choose <em>Presets → Punjab</em> on the left and press <em>Analyze</em>.
+        </p>
+      </div>
+      <figure className="how-figure">
+        <ExplodedView />
+        <figcaption>The method, taken apart: each layer is built from the one beneath it.</figcaption>
+      </figure>
     </section>
   )
 }
+
