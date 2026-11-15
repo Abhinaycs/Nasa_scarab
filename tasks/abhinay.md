@@ -33,7 +33,7 @@ Interfaces: [docs/CONTRACT.md](../docs/CONTRACT.md). Until Sravani's API is live
 
 ## /a5-deploy (22:00–22:45)
 - [x] `render.yaml` blueprint: Python web service (API) + static site (frontend)
-- [ ] Deployed; `VITE_API_URL` and `ALLOWED_ORIGINS` set
+- [x] Deployed; `VITE_API_URL` and `ALLOWED_ORIGINS` set (site https://fire-calendar-42k5.onrender.com, API https://fire-calendar-api-x1ip.onrender.com, from the fork Abhinaycs/Nasa_scarab)
 - [x] `.github/workflows/keepwarm.yml` pings `/api/health` every 10 minutes (inactive until the repo variable `API_URL` is set)
 - [ ] Live URL tested in a private window on desktop and phone; URL added to README
 

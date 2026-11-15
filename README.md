@@ -2,7 +2,7 @@
 
 NASA Space Apps Challenge 2026. A web app that combines MODIS (2000 onward) and VIIRS (2012 onward) active-fire hotspots from NASA FIRMS into one consistent series. It shows a month-by-year **burning calendar**, anomalies against the historical median, and CSV downloads for any area drawn over India.
 
-**Live demo:** _coming tonight_ · **Team:** Sravani (data + API), Abhinay (frontend + deploy + demo)
+**Live demo:** https://fire-calendar-42k5.onrender.com (API: https://fire-calendar-api-x1ip.onrender.com; the free API sleeps when idle, so the first request can take up to a minute) · **Team:** Sravani (data + API), Abhinay (frontend + deploy + demo)
 
 ## How the team works
 Each person opens this repo in VS Code, runs `claude`, and works through their slash commands in order:

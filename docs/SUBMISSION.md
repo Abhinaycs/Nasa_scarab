@@ -1,6 +1,6 @@
 # Space Apps submission text (ready to paste)
 
-Replace `LIVE_URL` and `DEMO_URL` before submitting. All text is in English, as required.
+Replace `DEMO_URL` (the public Google Drive link to docs/demo/slides.pdf) before submitting. All text is in English, as required.
 
 ---
 
@@ -20,7 +20,7 @@ This lets emergency managers, scientists and land managers see at a glance wheth
 DEMO_URL
 
 ## Link to Final Project
-- Live app: LIVE_URL
+- Live app: https://fire-calendar-42k5.onrender.com
 - Code: https://github.com/sravani6130/Nasa_scarab
 
 ## Detailed Project Description
